@@ -173,26 +173,180 @@
 <body>
 
 
-    <!-- =====================================================
-         NAVBAR
-    ====================================================== -->
+   <!-- =====================================================
+     NAVBAR
+====================================================== -->
 
-    <header class="navbar">
+<header class="navbar">
 
-        <div class="container nav-container">
+    <div class="container nav-container">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+            <img
+                src="images/burggylogo.png"
+                alt="Burggy Logo">
+        </a>
 
 
-            <!-- LOGO -->
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="nav-links">
 
-            <a href="index.html" class="logo">
+            <a href="index.html" class="active">
+                Home
+            </a>
 
-                <img
-                    src="images/burggylogo.png"
-                    alt="Burggy Logo">
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="#">
+                Offers
+            </a>
+
+            <a href="#">
+                Gallery
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- DESKTOP NAV ACTIONS -->
+        <div class="nav-actions">
+
+            <a
+                href="wishlist.html"
+                class="nav-icon"
+                aria-label="Wishlist">
+
+                <i class="fa-regular fa-heart"></i>
 
             </a>
 
 
+            <a
+                href="cart.html"
+                class="nav-icon"
+                aria-label="Shopping Cart">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+            </a>
+
+
+            <a
+                href="menu.html"
+                class="btn btn-small">
+
+                Order Now
+
+            </a>
+
+
+            <a
+                href="login.html"
+                class="nav-login">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Login</span>
+
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE NAVIGATION -->
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="index.html" class="active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="menu.html">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Menu</span>
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-tag"></i>
+            <span>Offers</span>
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-images"></i>
+            <span>Gallery</span>
+        </a>
+
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>About</span>
+        </a>
+
+        <a href="contact.html">
+            <i class="fa-solid fa-phone"></i>
+            <span>Contact</span>
+        </a>
+
+
+        <div class="mobile-nav-divider"></div>
+
+
+        <a href="wishlist.html">
+            <i class="fa-regular fa-heart"></i>
+            <span>Wishlist</span>
+        </a>
+
+        <a href="cart.html">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Cart</span>
+        </a>
+
+        <a href="login.html">
+            <i class="fa-solid fa-user"></i>
+            <span>Login</span>
+        </a>
+
+
+        <a
+            href="menu.html"
+            class="mobile-order-btn">
+
+            <i class="fa-solid fa-burger"></i>
+
+            <span>Order Now</span>
+
+        </a>
+
+    </div>
+
+</header>
             <!-- NAVIGATION -->
 
             <nav class="nav-links">
@@ -270,119 +424,103 @@
 
 
     <!-- =====================================================
-         HERO SECTION
-    ====================================================== -->
+     HERO SECTION
+====================================================== -->
 
-    <section class="hero">
+<section
+    class="hero"
+    style="
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,0.92) 0%,
+                rgba(0,0,0,0.72) 45%,
+                rgba(0,0,0,0.35) 100%
+            ),
+            url('images/burggy-bg.jpg');
+    "
+>
 
-        <div class="hero-overlay"></div>
+    <div class="hero-overlay"></div>
 
+    <div class="container hero-content">
 
-        <div class="container hero-content">
+        <span class="hero-tag">
+            <i class="fa-solid fa-fire"></i>
+            Freshly Made. Seriously Delicious.
+        </span>
 
-
-            <span class="hero-tag">
-
-                <i class="fa-solid fa-fire"></i>
-
-                Freshly Made. Seriously Delicious.
-
+        <h1>
+            BIG FLAVOUR.
+            <br>
+            <span>
+                ZERO BORING BITES.
             </span>
+        </h1>
 
+        <p>
+            Premium burgers, crispy chicken, loaded fries
+            and street-style favourites made fresh for you.
+        </p>
 
-            <h1>
+        <div class="hero-buttons">
 
-                BIG FLAVOUR.
+            <a
+                href="menu.html"
+                class="btn"
+            >
+                Explore Menu
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
-                <br>
-
-                <span>
-                    ZERO BORING BITES.
-                </span>
-
-            </h1>
-
-
-            <p>
-
-                Premium burgers, crispy chicken, loaded fries
-                and street-style favourites made fresh for you.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-
-                <a
-                    href="menu.html"
-                    class="btn">
-
-                    Explore Menu
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-
-                <a
-                    href="menu.html"
-                    class="btn btn-outline">
-
-                    Order Now
-
-                </a>
-
-
-            </div>
-
-
-            <!-- TRUST -->
-
-            <div class="hero-trust">
-
-
-                <div class="trust-item">
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <span>
-                        Premium Taste
-                    </span>
-
-                </div>
-
-
-                <div class="trust-item">
-
-                    <i class="fa-solid fa-burger"></i>
-
-                    <span>
-                        Freshly Prepared
-                    </span>
-
-                </div>
-
-
-                <div class="trust-item">
-
-                    <i class="fa-solid fa-truck-fast"></i>
-
-                    <span>
-                        Fast Delivery
-                    </span>
-
-                </div>
-
-
-            </div>
-
+            <a
+                href="menu.html"
+                class="btn btn-outline"
+            >
+                Order Now
+            </a>
 
         </div>
 
-    </section>
+        <!-- TRUST -->
 
+        <div class="hero-trust">
 
+            <div class="trust-item">
+
+                <i class="fa-solid fa-star"></i>
+
+                <span>
+                    Premium Taste
+                </span>
+
+            </div>
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-burger"></i>
+
+                <span>
+                    Freshly Prepared
+                </span>
+
+            </div>
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+                <span>
+                    Fast Delivery
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- =====================================================
          CATEGORY SECTION
