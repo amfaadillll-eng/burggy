@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const navbar = document.querySelector(".navbar");
 
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
 
     // ========================================================
     // STICKY NAVBAR
@@ -41,75 +44,280 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ========================================================
+    // MOBILE NAVIGATION
+    // ========================================================
+
+    function closeMobileMenu() {
+
+        if (!mobileNav || !mobileMenuBtn) return;
+
+        mobileNav.classList.remove("active");
+        mobileMenuBtn.classList.remove("active");
+
+        mobileMenuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        document.body.classList.remove("menu-open");
+
+    }
+
+
+    function toggleMobileMenu() {
+
+        if (!mobileNav || !mobileMenuBtn) return;
+
+        const isOpen =
+            mobileNav.classList.contains("active");
+
+        if (isOpen) {
+
+            closeMobileMenu();
+
+        } else {
+
+            mobileNav.classList.add("active");
+            mobileMenuBtn.classList.add("active");
+
+            mobileMenuBtn.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+            document.body.classList.add("menu-open");
+
+        }
+
+    }
+
+
+    if (mobileMenuBtn && mobileNav) {
+
+        mobileMenuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        mobileMenuBtn.setAttribute(
+            "aria-controls",
+            "mobileNav"
+        );
+
+        mobileMenuBtn.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+
+
+        mobileMenuBtn.addEventListener(
+            "click",
+            event => {
+
+                event.stopPropagation();
+
+                toggleMobileMenu();
+
+            }
+        );
+
+
+        // Close menu after clicking a mobile link
+
+        mobileNav
+            .querySelectorAll("a")
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        closeMobileMenu();
+
+                    }
+                );
+
+            });
+
+
+        // Prevent clicks inside mobile menu
+        // from triggering outside-click close
+
+        mobileNav.addEventListener(
+            "click",
+            event => {
+
+                event.stopPropagation();
+
+            }
+        );
+
+    }
+
+
+    // ========================================================
+    // CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+    // ========================================================
+
+    document.addEventListener(
+        "click",
+        event => {
+
+            if (!mobileNav || !mobileMenuBtn) {
+                return;
+            }
+
+            if (
+                mobileNav.classList.contains("active") &&
+                !mobileNav.contains(event.target) &&
+                !mobileMenuBtn.contains(event.target)
+            ) {
+
+                closeMobileMenu();
+
+            }
+
+        }
+    );
+
+
+    // ========================================================
+    // CLOSE MOBILE MENU ON ESCAPE
+    // ========================================================
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (event.key === "Escape") {
+
+                closeMobileMenu();
+
+            }
+
+        }
+    );
+
+
+    // ========================================================
+    // CLOSE MOBILE MENU WHEN SCREEN BECOMES DESKTOP
+    // ========================================================
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (window.innerWidth > 900) {
+
+                closeMobileMenu();
+
+            }
+
+        }
+    );
+
+
+    // ========================================================
     // SMOOTH SCROLL
     // ========================================================
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(anchor => {
 
-        anchor.addEventListener("click", function (e) {
+            anchor.addEventListener(
+                "click",
+                function (e) {
 
-            const targetId = this.getAttribute("href");
+                    const targetId =
+                        this.getAttribute("href");
 
-            if (!targetId || targetId === "#") return;
+                    if (
+                        !targetId ||
+                        targetId === "#"
+                    ) {
+                        return;
+                    }
 
-            const target = document.querySelector(targetId);
+                    const target =
+                        document.querySelector(targetId);
 
-            if (!target) return;
+                    if (!target) return;
 
-            e.preventDefault();
+                    e.preventDefault();
 
-            const navbarHeight = navbar
-                ? navbar.offsetHeight
-                : 0;
+                    const navbarHeight =
+                        navbar
+                            ? navbar.offsetHeight
+                            : 0;
 
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                navbarHeight;
+                    const targetPosition =
+                        target.getBoundingClientRect().top +
+                        window.scrollY -
+                        navbarHeight;
 
-            window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
-            });
+                    window.scrollTo({
+
+                        top: targetPosition,
+
+                        behavior: "smooth"
+
+                    });
+
+                }
+            );
 
         });
-
-    });
 
 
     // ========================================================
     // REVEAL ANIMATION
     // ========================================================
 
-    const revealElements = document.querySelectorAll(
-        "section, .category-card, .food-card, .why-card, " +
-        ".review-card, .gallery-item, .story-content, " +
-        ".story-image, .offer, .cta-box"
-    );
+    const revealElements =
+        document.querySelectorAll(
+            "section, .category-card, .food-card, .why-card, " +
+            ".review-card, .gallery-item, .story-content, " +
+            ".story-image, .offer, .cta-box"
+        );
+
 
     if ("IntersectionObserver" in window) {
 
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
+        const revealObserver =
+            new IntersectionObserver(
 
-                entries.forEach(entry => {
+                (entries, observer) => {
 
-                    if (entry.isIntersecting) {
+                    entries.forEach(entry => {
 
-                        entry.target.classList.add("show");
+                        if (
+                            entry.isIntersecting
+                        ) {
 
-                        observer.unobserve(entry.target);
+                            entry.target.classList.add(
+                                "show"
+                            );
 
-                    }
+                            observer.unobserve(
+                                entry.target
+                            );
 
-                });
+                        }
 
-            },
-            {
-                threshold: 0.12,
-                rootMargin: "0px 0px -40px 0px"
-            }
-        );
+                    });
+
+                },
+
+                {
+                    threshold: 0.12,
+
+                    rootMargin:
+                        "0px 0px -40px 0px"
+                }
+
+            );
+
 
         revealElements.forEach(element => {
 
@@ -133,45 +341,65 @@ document.addEventListener("DOMContentLoaded", () => {
     // ========================================================
     // FOOD CARD HOVER
     // ========================================================
-    // Event delegation is used because home.js may create
-    // food cards AFTER this script has already loaded.
+    // Event delegation allows cards generated
+    // dynamically by home.js to work correctly.
 
-    document.addEventListener("mouseover", event => {
+    document.addEventListener(
+        "mouseover",
+        event => {
 
-        const card = event.target.closest(".food-card");
+            const card =
+                event.target.closest(".food-card");
 
-        if (!card) return;
+            if (!card) return;
 
-        card.classList.add("food-card-hover");
+            card.classList.add(
+                "food-card-hover"
+            );
 
-    });
+        }
+    );
 
 
-    document.addEventListener("mouseout", event => {
+    document.addEventListener(
+        "mouseout",
+        event => {
 
-        const card = event.target.closest(".food-card");
+            const card =
+                event.target.closest(".food-card");
 
-        if (!card) return;
+            if (!card) return;
 
-        // Prevent removing the class when moving
-        // between elements inside the same card.
+            if (
+                card.contains(event.relatedTarget)
+            ) {
+                return;
+            }
 
-        if (card.contains(event.relatedTarget)) return;
+            card.classList.remove(
+                "food-card-hover"
+            );
 
-        card.classList.remove("food-card-hover");
-
-    });
+        }
+    );
 
 
     // ========================================================
     // BACK TO TOP BUTTON
     // ========================================================
 
-    const topBtn = document.createElement("button");
+    const topBtn =
+        document.createElement("button");
 
     topBtn.type = "button";
+
     topBtn.id = "topBtn";
-    topBtn.setAttribute("aria-label", "Back to top");
+
+    topBtn.setAttribute(
+        "aria-label",
+        "Back to top"
+    );
+
     topBtn.innerHTML = `
         <i class="fa-solid fa-arrow-up"></i>
     `;
@@ -183,74 +411,110 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (window.scrollY > 500) {
 
-            topBtn.classList.add("visible");
+            topBtn.classList.add(
+                "visible"
+            );
 
         } else {
 
-            topBtn.classList.remove("visible");
+            topBtn.classList.remove(
+                "visible"
+            );
 
         }
 
     }
 
-    window.addEventListener("scroll", updateTopButton, {
-        passive: true
-    });
+
+    window.addEventListener(
+        "scroll",
+        updateTopButton,
+        {
+            passive: true
+        }
+    );
+
 
     updateTopButton();
 
 
-    topBtn.addEventListener("click", () => {
+    topBtn.addEventListener(
+        "click",
+        () => {
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+            window.scrollTo({
 
-    });
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+    );
 
 
     // ========================================================
     // BUTTON PRESS ANIMATION
     // ========================================================
 
-    document.addEventListener("click", event => {
+    document.addEventListener(
+        "click",
+        event => {
 
-        const button = event.target.closest(".btn");
+            const button =
+                event.target.closest(".btn");
 
-        if (!button) return;
+            if (!button) return;
 
-        button.classList.add("btn-pressed");
+            button.classList.add(
+                "btn-pressed"
+            );
 
-        setTimeout(() => {
 
-            button.classList.remove("btn-pressed");
+            setTimeout(
+                () => {
 
-        }, 150);
+                    button.classList.remove(
+                        "btn-pressed"
+                    );
 
-    });
+                },
+                150
+            );
+
+        }
+    );
 
 
     // ========================================================
     // ACTIVE NAVIGATION
     // ========================================================
 
-    const navLinks = document.querySelectorAll(
-        ".nav-links a[href^='#']"
-    );
+    const navLinks =
+        document.querySelectorAll(
+            ".nav-links a[href^='#']"
+        );
 
-    const pageSections = document.querySelectorAll(
-        "section[id]"
-    );
+
+    const pageSections =
+        document.querySelectorAll(
+            "section[id]"
+        );
 
 
     function updateActiveNavigation() {
 
-        if (!pageSections.length || !navLinks.length) {
+        if (
+            !pageSections.length ||
+            !navLinks.length
+        ) {
             return;
         }
 
+
         let currentSection = "";
+
 
         pageSections.forEach(section => {
 
@@ -259,9 +523,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.scrollY -
                 180;
 
-            if (window.scrollY >= sectionTop) {
 
-                currentSection = section.id;
+            if (
+                window.scrollY >= sectionTop
+            ) {
+
+                currentSection =
+                    section.id;
 
             }
 
@@ -270,13 +538,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         navLinks.forEach(link => {
 
-            link.classList.remove("active");
+            link.classList.remove(
+                "active"
+            );
 
-            const href = link.getAttribute("href");
 
-            if (href === `#${currentSection}`) {
+            const href =
+                link.getAttribute("href");
 
-                link.classList.add("active");
+
+            if (
+                href ===
+                `#${currentSection}`
+            ) {
+
+                link.classList.add(
+                    "active"
+                );
 
             }
 
@@ -284,96 +562,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    window.addEventListener("scroll", updateActiveNavigation, {
-        passive: true
-    });
+
+    window.addEventListener(
+        "scroll",
+        updateActiveNavigation,
+        {
+            passive: true
+        }
+    );
+
 
     updateActiveNavigation();
-
-
-    // ========================================================
-    // MOBILE NAVIGATION
-    // ========================================================
-    // Works if a mobile menu toggle exists in the HTML.
-    // Otherwise it simply does nothing.
-
-    const menuToggle = document.querySelector(
-        ".menu-toggle, .mobile-menu-toggle, #menuToggle"
-    );
-
-    const navLinksContainer = document.querySelector(
-        ".nav-links"
-    );
-
-    if (menuToggle && navLinksContainer) {
-
-        menuToggle.addEventListener("click", () => {
-
-            navLinksContainer.classList.toggle("mobile-open");
-
-            menuToggle.classList.toggle("active");
-
-        });
-
-
-        navLinksContainer
-            .querySelectorAll("a")
-            .forEach(link => {
-
-                link.addEventListener("click", () => {
-
-                    navLinksContainer.classList.remove(
-                        "mobile-open"
-                    );
-
-                    menuToggle.classList.remove("active");
-
-                });
-
-            });
-
-    }
-
-
-    // ========================================================
-    // CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
-    // ========================================================
-
-    document.addEventListener("click", event => {
-
-        if (!menuToggle || !navLinksContainer) return;
-
-        if (
-            !navLinksContainer.contains(event.target) &&
-            !menuToggle.contains(event.target)
-        ) {
-
-            navLinksContainer.classList.remove(
-                "mobile-open"
-            );
-
-            menuToggle.classList.remove("active");
-
-        }
-
-    });
 
 
     // ========================================================
     // PAGE LOAD
     // ========================================================
 
-    window.addEventListener("load", () => {
+    window.addEventListener(
+        "load",
+        () => {
 
-        document.body.classList.add("page-loaded");
+            document.body.classList.add(
+                "page-loaded"
+            );
 
-    });
+        }
+    );
 
 
     // ========================================================
     // CONSOLE
     // ========================================================
 
-    console.log("🍔 Burggy website loaded successfully.");
+    console.log(
+        "🍔 Burggy website loaded successfully."
+    );
 
 });
