@@ -1,203 +1,282 @@
 /* =========================================================
-   BURGGY — RESPONSIVE SYSTEM
-   Premium Black / White / Orange
-   ========================================================= */
+   BURGGY — PREMIUM RESPONSIVE SYSTEM
+   Mobile-first refinement
+   Theme: Black / White / Orange
+========================================================= */
 
 
 /* =========================================================
-   LARGE LAPTOPS
+   GLOBAL MOBILE SAFETY
 ========================================================= */
 
-@media (max-width: 1200px) {
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
-    .container {
-        width: min(92%, 1120px);
-    }
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
-    .nav-links {
-        gap: 22px;
-    }
+img {
+    max-width: 100%;
+}
 
-    .hero-content {
-        max-width: 650px;
-    }
-
-    .hero h1 {
-        font-size: clamp(3.5rem, 6vw, 5.5rem);
-    }
-
-    .category-grid,
-    .food-grid,
-    #homeBestSellers {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .why-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .review-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .review-card:last-child {
-        grid-column: span 2;
-    }
-
-    .story-grid {
-        gap: 50px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1.4fr 1fr 1fr;
-    }
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 
 /* =========================================================
-   TABLETS
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .mobile-menu-btn,
+    .mobile-nav {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .navbar {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
 ========================================================= */
 
 @media (max-width: 900px) {
 
-    .container {
-        width: min(92%, 760px);
-    }
-
-    /* =====================================================
-       NAVBAR
-    ===================================================== */
+    /* ---------- NAVBAR ---------- */
 
     .navbar {
-        min-height: 72px;
-        padding: 12px 20px;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
 
-        position: relative;
-        z-index: 10000;
+        width: 100% !important;
+        height: 68px !important;
 
-        background: rgba(5, 5, 5, .98) !important;
+        padding: 0 18px !important;
 
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        background: rgba(8, 8, 8, 0.94) !important;
         backdrop-filter: blur(18px);
         -webkit-backdrop-filter: blur(18px);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+        z-index: 9999 !important;
     }
 
-    /* Hide desktop navigation */
+
+    /* ---------- LOGO ---------- */
+
+    .navbar .logo {
+        display: flex !important;
+        align-items: center !important;
+
+        max-width: 125px !important;
+        margin: 0 !important;
+    }
+
+    .navbar .logo img {
+        display: block;
+        width: 105px !important;
+        height: auto !important;
+        max-height: 42px !important;
+        object-fit: contain;
+    }
+
+
+    /* ---------- DESKTOP NAV ---------- */
 
     .navbar .nav-links {
         display: none !important;
     }
 
-    /* Hide desktop actions */
-
     .navbar .nav-actions {
         display: none !important;
     }
 
-    .navbar > .btn {
-        display: none !important;
-    }
 
-    /* Logo */
-
-    .logo img {
-        max-width: 115px;
-    }
-
-    /* Mobile menu button */
+    /* ---------- HAMBURGER ---------- */
 
     .mobile-menu-btn {
-        display: flex !important;
+        width: 42px !important;
+        height: 42px !important;
 
+        display: flex !important;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 5px;
 
-        width: 44px;
-        height: 44px;
+        padding: 0 !important;
+        margin: 0 !important;
 
-        margin-left: auto;
+        background: rgba(255, 255, 255, 0.06) !important;
 
-        background: rgba(255, 255, 255, .05);
-
-        border: 1px solid rgba(255, 255, 255, .15);
-        border-radius: 10px;
-
-        color: #ffffff;
-
-        font-size: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.10) !important;
+        border-radius: 12px !important;
 
         cursor: pointer;
+        flex-shrink: 0;
 
-        transition: all .25s ease;
+        transition:
+            background 0.25s ease,
+            border-color 0.25s ease,
+            transform 0.25s ease;
     }
 
-    .mobile-menu-btn:hover {
-        color: #f28c28;
-        border-color: #f28c28;
+    .mobile-menu-btn span {
+        display: block !important;
+
+        width: 18px !important;
+        height: 2px !important;
+
+        background: #ffffff !important;
+        border-radius: 10px;
+
+        transition:
+            transform 0.25s ease,
+            opacity 0.25s ease;
+    }
+
+    .mobile-menu-btn:active {
+        transform: scale(0.94);
+        background: rgba(255, 107, 0, 0.12) !important;
+        border-color: rgba(255, 107, 0, 0.35) !important;
     }
 
 
-    /* =====================================================
-       MOBILE NAV PANEL
-    ===================================================== */
+    /* ---------- MOBILE MENU PANEL ---------- */
 
     .mobile-nav {
+        position: fixed !important;
+
+        top: 68px !important;
+        left: 14px !important;
+        right: 14px !important;
+
+        width: auto !important;
+
         display: none !important;
 
-        position: fixed;
+        padding: 12px !important;
 
-        top: 72px;
-        left: 0;
-        right: 0;
+        background: rgba(13, 13, 13, 0.98) !important;
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
 
-        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.09) !important;
+        border-radius: 18px !important;
 
-        padding: 15px 20px 20px;
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.55),
+            0 0 0 1px rgba(255, 107, 0, 0.03);
 
-        background: rgba(7, 7, 7, .98);
+        z-index: 9998 !important;
 
-        border-top: 1px solid rgba(255, 255, 255, .08);
-        border-bottom: 1px solid rgba(255, 255, 255, .08);
-
-        box-shadow: 0 20px 45px rgba(0, 0, 0, .55);
-
-        z-index: 9999;
+        max-height: calc(100vh - 88px);
+        overflow-y: auto;
     }
 
     .mobile-nav.active {
         display: block !important;
+        animation: burggyMobileMenuIn 0.22s ease forwards;
     }
 
     .mobile-nav a {
-        display: flex;
+        display: flex !important;
+        align-items: center !important;
 
-        align-items: center;
+        min-height: 48px !important;
 
-        width: 100%;
+        padding: 0 15px !important;
+        margin: 2px 0 !important;
 
-        min-height: 48px;
+        color: rgba(255, 255, 255, 0.86) !important;
 
-        padding: 12px 15px;
+        font-size: 14px !important;
+        font-weight: 600 !important;
 
-        margin: 2px 0;
+        text-decoration: none !important;
 
-        color: #ffffff;
+        border-radius: 11px !important;
 
-        text-decoration: none;
-
-        font-size: 15px;
-        font-weight: 600;
-
-        border-radius: 8px;
-
-        transition: all .25s ease;
+        transition:
+            background 0.2s ease,
+            color 0.2s ease,
+            transform 0.2s ease;
     }
 
-    .mobile-nav a:hover {
-        color: #f28c28;
+    .mobile-nav a:hover,
+    .mobile-nav a:active {
+        color: #ffffff !important;
+        background: rgba(255, 107, 0, 0.10) !important;
+    }
 
-        background: rgba(242, 140, 40, .08);
+    .mobile-nav a:active {
+        transform: scale(0.98);
+    }
 
-        padding-left: 20px;
+
+    /* Mobile nav action buttons */
+
+    .mobile-nav .btn,
+    .mobile-nav .order-btn,
+    .mobile-nav .login-btn {
+        width: 100% !important;
+        justify-content: center !important;
+        margin-top: 7px !important;
+    }
+
+
+    /* ---------- LOCK PAGE WHEN MENU OPEN ---------- */
+
+    body.menu-open {
+        overflow: hidden !important;
     }
 
 
@@ -206,256 +285,191 @@
     ===================================================== */
 
     .hero {
-        min-height: 680px;
+        min-height: 720px !important;
+        height: auto !important;
 
-        background-image:
-            linear-gradient(
-                180deg,
-                rgba(0, 0, 0, .55),
-                rgba(0, 0, 0, .80)
-            ),
-            url("../images/burggy-bg.jpg") !important;
-
-        background-position: center center !important;
+        padding:
+            125px
+            22px
+            65px !important;
 
         background-size: cover !important;
+        background-position: 65% center !important;
 
-        background-repeat: no-repeat !important;
-
-        background-attachment: scroll !important;
-    }
-
-    .hero-content {
-        max-width: 600px;
-    }
-
-    .hero h1 {
-        font-size: clamp(3rem, 8vw, 4.8rem);
-        line-height: .98;
-    }
-
-    .hero-content > p {
-        max-width: 540px;
-    }
-
-    .hero-buttons {
-        flex-wrap: wrap;
-    }
-
-
-    /* =====================================================
-       CATEGORIES
-    ===================================================== */
-
-    .category-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-
-    /* =====================================================
-       FOOD
-    ===================================================== */
-
-    .food-grid,
-    #homeBestSellers {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .food-image {
-        height: 260px;
-    }
-
-
-    /* =====================================================
-       OFFER
-    ===================================================== */
-
-    .offer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 40px;
-        padding: 50px 40px;
-    }
-
-    .offer-side {
-        margin: 0;
-    }
-
-    .offer-circle {
-        width: 150px;
-        height: 150px;
-    }
-
-
-    /* =====================================================
-       STORY
-    ===================================================== */
-
-    .story-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .story-image {
-        min-height: 420px;
-    }
-
-
-    /* =====================================================
-       GALLERY
-    ===================================================== */
-
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 220px 220px 220px;
-    }
-
-    .gallery-large {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-
-
-    /* =====================================================
-       REVIEWS
-    ===================================================== */
-
-    .review-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    .footer-grid {
-        grid-template-columns: 1.5fr 1fr 1fr;
-        gap: 30px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        min-height: 72px;
-        padding: 12px 20px;
-    }
-
-    .logo img {
-        max-width: 115px;
-    }
-
-    /* Make absolutely sure desktop nav stays hidden */
-
-    .nav-links {
-        display: none !important;
-    }
-
-    .nav-actions {
-        display: none !important;
-    }
-
-    /* Mobile menu */
-
-    .mobile-menu-btn {
         display: flex !important;
-    }
-
-    .mobile-nav {
-        top: 72px;
-    }
-
-
-    /* =====================================================
-       HERO BACKGROUND
-    ===================================================== */
-
-    .hero {
-        min-height: 650px;
-
-        background:
-            linear-gradient(
-                180deg,
-                rgba(0, 0, 0, .48),
-                rgba(0, 0, 0, .82)
-            ),
-            url("../images/burggy-bg.jpg") center center / cover no-repeat !important;
-
-        background-attachment: scroll !important;
+        align-items: center !important;
     }
 
     .hero-content {
-        width: 100%;
-        max-width: 620px;
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        text-align: left !important;
     }
 
     .hero h1 {
-        font-size: clamp(3rem, 10vw, 4.4rem);
-        line-height: .98;
+        max-width: 430px;
+
+        font-size: clamp(42px, 12vw, 64px) !important;
+        line-height: 0.98 !important;
+        letter-spacing: -2px !important;
+
+        margin-bottom: 18px !important;
     }
 
-    .hero-content > p {
-        font-size: .95rem;
-        line-height: 1.7;
-        margin-top: 20px;
+    .hero h1 span {
+        display: inline !important;
+    }
+
+    .hero p {
+        max-width: 390px !important;
+
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+
+        color: rgba(255, 255, 255, 0.72) !important;
+
+        margin-bottom: 25px !important;
     }
 
     .hero-buttons {
-        width: 100%;
-        margin-top: 28px;
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+
+        gap: 10px !important;
     }
 
-    .hero-buttons .btn,
-    .hero-buttons .btn-outline {
-        min-height: 50px;
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 100% !important;
+        min-height: 52px !important;
+
+        justify-content: center !important;
     }
 
     .hero-trust {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+
+        gap: 8px !important;
+
+        width: 100% !important;
+
+        margin-top: 35px !important;
+    }
+
+    .hero-trust > div,
+    .trust-item {
+        min-width: 0 !important;
+
+        padding: 11px 7px !important;
+
+        background: rgba(255, 255, 255, 0.045);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 12px;
+
+        text-align: center;
+    }
+
+    .hero-trust i {
+        font-size: 13px !important;
+        color: #ff6b00 !important;
+    }
+
+    .hero-trust span {
+        font-size: 10px !important;
+        white-space: nowrap;
     }
 
 
     /* =====================================================
-       SECTIONS
+       GENERAL SECTIONS
     ===================================================== */
 
     .section {
-        padding: 80px 0;
+        width: 100% !important;
+
+        padding:
+            68px
+            18px !important;
     }
 
     .section-heading {
-        margin-bottom: 38px;
+        margin-bottom: 30px !important;
     }
 
     .section-heading h2 {
-        font-size: clamp(2.3rem, 8vw, 3.4rem);
+        font-size: clamp(28px, 8vw, 40px) !important;
+        line-height: 1.05 !important;
+        letter-spacing: -1px !important;
     }
 
-    .section-heading-row {
-        align-items: flex-start;
-        gap: 20px;
+    .section-heading p {
+        max-width: 500px !important;
+
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+    }
+
+    .section-eyebrow {
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
     }
 
 
     /* =====================================================
-       CATEGORY
+       CATEGORY SECTION
     ===================================================== */
 
     .category-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
+        width: 100% !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 10px !important;
     }
 
     .category-card {
-        min-height: 210px;
+        min-width: 0 !important;
+        width: 100% !important;
+
+        padding: 18px 12px !important;
+
+        border-radius: 15px !important;
+    }
+
+    .category-icon {
+        width: 48px !important;
+        height: 48px !important;
+
+        margin-bottom: 11px !important;
+
+        border-radius: 13px !important;
+    }
+
+    .category-icon i {
+        font-size: 18px !important;
+    }
+
+    .category-card h3 {
+        font-size: 14px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .category-card p {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+    }
+
+    .category-link {
+        font-size: 11px !important;
     }
 
 
@@ -463,236 +477,103 @@
        BEST SELLERS
     ===================================================== */
 
-    .food-grid,
-    #homeBestSellers {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
+    .best-sellers {
+        width: 100% !important;
+    }
+
+    .food-grid {
+        width: 100% !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 12px !important;
+    }
+
+    .food-card {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        border-radius: 16px !important;
+
+        overflow: hidden !important;
     }
 
     .food-image {
-        height: 230px;
+        width: 100% !important;
+        height: 155px !important;
+
+        overflow: hidden !important;
+    }
+
+    .food-image img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
     }
 
     .food-content {
-        padding: 20px;
+        padding: 13px !important;
     }
 
     .food-top {
-        gap: 10px;
+        gap: 5px !important;
     }
 
-    .food-top h3 {
-        font-size: 1rem;
+    .food-card h3 {
+        font-size: 14px !important;
+        line-height: 1.25 !important;
     }
 
     .food-description {
-        font-size: .82rem;
+        font-size: 10px !important;
+        line-height: 1.5 !important;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .food-rating {
+        font-size: 10px !important;
+    }
+
+    .food-price {
+        font-size: 16px !important;
+        font-weight: 800 !important;
     }
 
     .food-bottom {
-        gap: 12px;
+        margin-top: 11px !important;
+
+        gap: 7px !important;
     }
 
     .food-order-btn {
-        padding: 10px 13px !important;
-        font-size: .72rem !important;
+        min-height: 36px !important;
+
+        padding: 0 10px !important;
+
+        font-size: 10px !important;
     }
 
+    .wishlist-btn {
+        width: 34px !important;
+        height: 34px !important;
 
-    /* =====================================================
-       WHY
-    ===================================================== */
-
-    .why-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
+        flex-shrink: 0 !important;
     }
 
+    .food-badge {
+        top: 9px !important;
+        left: 9px !important;
 
-    /* =====================================================
-       REVIEWS
-    ===================================================== */
+        padding: 5px 8px !important;
 
-    .review-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-    }
-
-    .review-card:last-child {
-        grid-column: span 2;
-    }
-
-
-    /* =====================================================
-       STORY
-    ===================================================== */
-
-    .story-image,
-    .story-image img {
-        min-height: 360px;
-    }
-
-
-    /* =====================================================
-       CTA
-    ===================================================== */
-
-    .cta-box {
-        padding: 65px 35px;
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px 30px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 560px) {
-
-    .container {
-        width: min(92%, 480px);
-    }
-
-
-    /* =====================================================
-       NAVBAR
-    ===================================================== */
-
-    .navbar {
-        padding: 12px 16px;
-    }
-
-    .logo img {
-        max-width: 105px;
-    }
-
-    .mobile-menu-btn {
-        width: 42px;
-        height: 42px;
-    }
-
-    .mobile-nav {
-        top: 68px;
-
-        padding: 12px 16px 18px;
-    }
-
-    .mobile-nav a {
-        min-height: 46px;
-        font-size: 14px;
-    }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-
-    .hero {
-        min-height: 620px;
-
-        background:
-            linear-gradient(
-                180deg,
-                rgba(0, 0, 0, .42),
-                rgba(0, 0, 0, .82)
-            ),
-            url("../images/burggy-bg.jpg") center center / cover no-repeat !important;
-
-        background-attachment: scroll !important;
-    }
-
-    .hero h1 {
-        font-size: 2.75rem;
-        letter-spacing: -1.5px;
-    }
-
-    .hero-tag {
-        font-size: .65rem;
-    }
-
-    .hero-content > p {
-        margin-top: 18px;
-        font-size: .9rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .hero-buttons .btn,
-    .hero-buttons .btn-outline {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .hero-trust {
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-    }
-
-
-    /* =====================================================
-       SECTIONS
-    ===================================================== */
-
-    .section {
-        padding: 70px 0;
-    }
-
-    .section-heading h2 {
-        font-size: 2.4rem;
-    }
-
-    .section-heading-row {
-        flex-direction: column;
-    }
-
-
-    /* =====================================================
-       CATEGORY
-    ===================================================== */
-
-    .category-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .category-card {
-        min-height: 190px;
-        padding: 22px 16px;
-    }
-
-
-    /* =====================================================
-       FOOD
-    ===================================================== */
-
-    .food-grid,
-    #homeBestSellers {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .food-image {
-        height: 270px;
-    }
-
-    .food-content {
-        padding: 20px;
-    }
-
-    .food-order-btn {
-        padding: 11px 15px !important;
+        font-size: 8px !important;
+        letter-spacing: 0.5px !important;
     }
 
 
@@ -700,26 +581,93 @@
        OFFER
     ===================================================== */
 
+    .offer-section {
+        padding:
+            30px
+            18px !important;
+    }
+
     .offer {
-        padding: 40px 24px;
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        gap: 25px !important;
+
+        padding: 28px 20px !important;
+
+        border-radius: 20px !important;
+
+        overflow: hidden !important;
+    }
+
+    .offer-content {
+        width: 100% !important;
+        max-width: none !important;
     }
 
     .offer-content h2 {
-        font-size: 3rem;
+        font-size: 30px !important;
+        line-height: 1.05 !important;
+    }
+
+    .offer-content p {
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+    }
+
+    .offer-side {
+        width: 100% !important;
+
+        display: flex !important;
+        justify-content: center !important;
     }
 
     .offer-circle {
-        width: 140px;
-        height: 140px;
+        width: 145px !important;
+        height: 145px !important;
     }
 
 
     /* =====================================================
-       WHY
+       WHY BURGGY
     ===================================================== */
 
     .why-grid {
-        grid-template-columns: 1fr;
+        display: grid !important;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 10px !important;
+    }
+
+    .why-card {
+        min-width: 0 !important;
+
+        padding: 20px 14px !important;
+
+        border-radius: 15px !important;
+    }
+
+    .why-icon {
+        width: 44px !important;
+        height: 44px !important;
+
+        margin-bottom: 12px !important;
+    }
+
+    .why-icon i {
+        font-size: 16px !important;
+    }
+
+    .why-card h3 {
+        font-size: 14px !important;
+    }
+
+    .why-card p {
+        font-size: 11px !important;
+        line-height: 1.55 !important;
     }
 
 
@@ -728,11 +676,38 @@
     ===================================================== */
 
     .review-grid {
-        grid-template-columns: 1fr;
+        width: 100% !important;
+
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 12px !important;
     }
 
-    .review-card:last-child {
-        grid-column: auto;
+    .review-card {
+        width: 100% !important;
+
+        padding: 20px !important;
+
+        border-radius: 16px !important;
+    }
+
+    .review-card p {
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+    }
+
+    .review-stars {
+        font-size: 11px !important;
+    }
+
+    .review-user {
+        margin-top: 17px !important;
+    }
+
+    .review-avatar {
+        width: 38px !important;
+        height: 38px !important;
     }
 
 
@@ -741,12 +716,38 @@
     ===================================================== */
 
     .gallery-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 220px);
+        width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        grid-auto-rows: 145px !important;
+
+        gap: 7px !important;
+    }
+
+    .gallery-item {
+        width: 100% !important;
+        height: 100% !important;
+
+        min-width: 0 !important;
+        min-height: 0 !important;
+
+        border-radius: 12px !important;
+
+        overflow: hidden !important;
+    }
+
+    .gallery-item img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
     }
 
     .gallery-large {
-        grid-column: auto;
+        grid-row: span 2 !important;
     }
 
 
@@ -754,9 +755,43 @@
        STORY
     ===================================================== */
 
-    .story-image,
+    .story-grid {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        gap: 28px !important;
+    }
+
+    .story-image {
+        width: 100% !important;
+        height: 300px !important;
+
+        border-radius: 18px !important;
+
+        overflow: hidden !important;
+    }
+
     .story-image img {
-        min-height: 330px;
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+    }
+
+    .story-content {
+        width: 100% !important;
+    }
+
+    .story-content h2 {
+        font-size: 30px !important;
+        line-height: 1.08 !important;
+    }
+
+    .story-content p {
+        font-size: 13px !important;
+        line-height: 1.75 !important;
     }
 
 
@@ -764,8 +799,40 @@
        CTA
     ===================================================== */
 
+    .cta-section {
+        padding:
+            20px
+            18px
+            70px !important;
+    }
+
     .cta-box {
-        padding: 60px 22px;
+        width: 100% !important;
+
+        padding: 35px 20px !important;
+
+        border-radius: 20px !important;
+
+        text-align: center !important;
+    }
+
+    .cta-box h2 {
+        font-size: 30px !important;
+        line-height: 1.05 !important;
+    }
+
+    .cta-box p {
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+    }
+
+    .cta-box .btn,
+    .cta-box a {
+        width: 100% !important;
+        max-width: 330px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
 
@@ -773,10 +840,256 @@
        FOOTER
     ===================================================== */
 
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
+    .footer {
+        width: 100% !important;
+        padding: 50px 18px 25px !important;
     }
+
+    .footer-grid {
+        width: 100% !important;
+
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 30px 18px !important;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1 !important;
+    }
+
+    .footer-brand p {
+        max-width: 320px !important;
+
+        font-size: 12px !important;
+        line-height: 1.7 !important;
+    }
+
+    .footer-column h4 {
+        font-size: 11px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .footer-column a {
+        font-size: 12px !important;
+    }
+
+    .social-links {
+        gap: 8px !important;
+    }
+
+    .social-links a {
+        width: 34px !important;
+        height: 34px !important;
+    }
+
+    .footer-bottom {
+        margin-top: 35px !important;
+        padding-top: 18px !important;
+
+        font-size: 10px !important;
+    }
+
+
+    /* =====================================================
+       COMMON BUTTONS
+    ===================================================== */
+
+    .btn {
+        min-height: 48px !important;
+
+        padding:
+            0 20px !important;
+
+        border-radius: 10px !important;
+
+        font-size: 12px !important;
+        font-weight: 700 !important;
+    }
+
+
+    /* =====================================================
+       MOBILE ANIMATION
+    ===================================================== */
+
+    @keyframes burggyMobileMenuIn {
+
+        from {
+            opacity: 0;
+            transform: translateY(-8px) scale(0.98);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        height: 64px !important;
+        padding: 0 14px !important;
+    }
+
+    .navbar .logo img {
+        width: 96px !important;
+    }
+
+    .mobile-menu-btn {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .mobile-nav {
+        top: 64px !important;
+        left: 10px !important;
+        right: 10px !important;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 690px !important;
+
+        padding:
+            112px
+            18px
+            55px !important;
+
+        background-position: 62% center !important;
+    }
+
+    .hero h1 {
+        font-size: 43px !important;
+        letter-spacing: -1.8px !important;
+    }
+
+    .hero p {
+        font-size: 13px !important;
+    }
+
+    .hero-trust {
+        gap: 5px !important;
+    }
+
+    .hero-trust > div,
+    .trust-item {
+        padding:
+            9px
+            4px !important;
+    }
+
+    .hero-trust span {
+        font-size: 9px !important;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding:
+            58px
+            15px !important;
+    }
+
+    .section-heading {
+        margin-bottom: 25px !important;
+    }
+
+    .section-heading h2 {
+        font-size: 29px !important;
+    }
+
+
+    /* CATEGORIES */
+
+    .category-grid {
+        gap: 8px !important;
+    }
+
+    .category-card {
+        padding:
+            16px
+            9px !important;
+    }
+
+
+    /* FOOD */
+
+    .food-grid {
+        gap: 9px !important;
+    }
+
+    .food-image {
+        height: 135px !important;
+    }
+
+    .food-content {
+        padding: 11px !important;
+    }
+
+    .food-card h3 {
+        font-size: 13px !important;
+    }
+
+    .food-price {
+        font-size: 15px !important;
+    }
+
+    .food-order-btn {
+        font-size: 9px !important;
+        padding: 0 8px !important;
+    }
+
+
+    /* WHY */
+
+    .why-grid {
+        gap: 8px !important;
+    }
+
+    .why-card {
+        padding:
+            17px
+            10px !important;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-grid {
+        grid-auto-rows: 125px !important;
+        gap: 5px !important;
+    }
+
+
+    /* STORY */
+
+    .story-image {
+        height: 250px !important;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .footer-brand {
+        grid-column: auto !important;
+    }
+
 }
 
 
@@ -784,35 +1097,26 @@
    VERY SMALL PHONES
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 360px) {
 
     .hero h1 {
-        font-size: 2.35rem;
+        font-size: 38px !important;
     }
 
     .hero-trust {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .food-image {
+        height: 190px !important;
     }
 
     .category-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr !important;
     }
 
-    .food-content {
-        padding: 18px;
-    }
-
-    .food-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .food-bottom .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .offer-content h2 {
-        font-size: 2.5rem;
-    }
 }
