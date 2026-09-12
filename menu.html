@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore the Burggy menu — burgers, shawarma, crispy rolls, loaded fries, combos and more."
+    >
+
+    <title>Menu | Burggy</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         BURGGY CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/menu.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/animations.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="Burggy Home"
+        >
+
+            <img
+                src="images/burggylogo.png"
+                alt="Burggy"
+            >
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="nav-links"
+            id="navLinks"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="menu.html"
+                class="active"
+            >
+                Menu
+            </a>
+
+            <a href="index.html#offers">
+                Offers
+            </a>
+
+            <a href="index.html#gallery">
+                Gallery
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- NAV ACTIONS -->
+
+        <div class="nav-actions">
+
+
+            <!-- WISHLIST -->
+
+            <a
+                href="wishlist.html"
+                class="nav-icon"
+                aria-label="Wishlist"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+                <span class="wishlist-count">
+                    0
+                </span>
+
+            </a>
+
+
+            <!-- CART -->
+
+            <a
+                href="cart.html"
+                class="nav-icon"
+                aria-label="Shopping Cart"
+            >
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+            <!-- ORDER NOW -->
+
+            <a
+                href="menu.html"
+                class="btn btn-primary nav-order-btn"
+            >
+                Order Now
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                type="button"
+                aria-label="Open navigation menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MENU HERO
+========================================================= -->
+
+<main>
+
+
+<section class="menu-hero">
+
+    <div class="menu-hero-overlay"></div>
+
+
+    <div class="container menu-hero-content">
+
+
+        <span class="menu-eyebrow">
+            BURGGY RESTAURANT
+        </span>
+
+
+        <h1>
+            Our <span>Menu</span>
+        </h1>
+
+
+        <p>
+            Big flavours. Fresh ingredients.
+            Made fresh for every craving.
+        </p>
+
+
+        <div class="menu-hero-line"></div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CATEGORY NAVIGATION
+========================================================= -->
+
+<section class="menu-navigation-section">
+
+    <div class="container">
+
+
+        <div class="menu-navigation">
+
+
+            <button
+                class="menu-filter active"
+                data-filter="all"
+                type="button"
+            >
+
+                <i class="fa-solid fa-utensils"></i>
+
+                <span>All</span>
+
+            </button>
+
+
+            <button
+                class="menu-filter"
+                data-filter="Shawarma & Crispy Roll"
+                type="button"
+            >
+
+                <i class="fa-solid fa-burrito"></i>
+
+                <span>Shawarma & Rolls</span>
+
+            </button>
+
+
+            <button
+                class="menu-filter"
+                data-filter="Loaded Fries & Cheese Fries"
+                type="button"
+            >
+
+                <i class="fa-solid fa-fire"></i>
+
+                <span>Loaded Fries</span>
+
+            </button>
+
+
+            <button
+                class="menu-filter"
+                data-filter="Chicken Fried Combos"
+                type="button"
+            >
+
+                <i class="fa-solid fa-drumstick-bite"></i>
+
+                <span>Combos</span>
+
+            </button>
+
+
+            <button
+                class="menu-filter"
+                data-filter="Burger & Sandwich"
+                type="button"
+            >
+
+                <i class="fa-solid fa-burger"></i>
+
+                <span>Burgers & Sandwiches</span>
+
+            </button>
+
+
+            <button
+                class="menu-filter"
+                data-filter="Snacks"
+                type="button"
+            >
+
+                <i class="fa-solid fa-cookie-bite"></i>
+
+                <span>Snacks</span>
+
+            </button>
+
+
+            <button
+                class="menu-filter"
+                data-filter="Drinks"
+                type="button"
+            >
+
+                <i class="fa-solid fa-glass-water"></i>
+
+                <span>Drinks</span>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MENU CONTENT
+========================================================= -->
+
+<section class="menu-section">
+
+    <div class="container">
+
+
+        <!-- SECTION INTRO -->
+
+        <div class="menu-section-heading">
+
+            <span class="section-eyebrow">
+                FRESH FROM THE KITCHEN
+            </span>
+
+
+            <h2>
+                Choose your <span>favourite</span>
+            </h2>
+
+
+            <p>
+                From crispy rolls to loaded fries,
+                find something worth craving.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             DYNAMIC MENU CONTAINER
+
+             menu.js injects all food cards here.
+        ================================================== -->
+
+        <div
+            id="menuContainer"
+            class="menu-container"
+        >
+
+            <div class="menu-loading">
+
+                <div class="menu-loading-spinner">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                </div>
+
+
+                <h3>
+                    Loading Burggy's menu...
+                </h3>
+
+
+                <p>
+                    Preparing something delicious.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MENU CTA
+========================================================= -->
+
+<section class="menu-cta-section">
+
+    <div class="container">
+
+
+        <div class="menu-cta">
+
+
+            <div class="menu-cta-content">
+
+                <span class="menu-cta-eyebrow">
+                    HUNGRY ALREADY?
+                </span>
+
+
+                <h2>
+                    Your next favourite
+                    <span>is waiting.</span>
+                </h2>
+
+
+                <p>
+                    Pick your favourites and
+                    get your Burggy order started.
+                </p>
+
+
+                <a
+                    href="menu.html"
+                    class="btn btn-primary"
+                >
+
+                    <span>
+                        Order Now
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="menu-cta-icon">
+
+                <i class="fa-solid fa-burger"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a
+                href="index.html"
+                class="footer-logo"
+            >
+
+                <img
+                    src="images/burggylogo.png"
+                    alt="Burggy"
+                >
+
+            </a>
+
+
+            <p>
+                Good food. Bold flavours.
+                Made for your cravings.
+            </p>
+
+
+            <div class="social-links">
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="WhatsApp"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <div class="footer-column">
+
+            <h3>
+                Our Menu
+            </h3>
+
+
+            <a href="menu.html">
+                Shawarma & Rolls
+            </a>
+
+            <a href="menu.html">
+                Loaded Fries
+            </a>
+
+            <a href="menu.html">
+                Burgers
+            </a>
+
+            <a href="menu.html">
+                Combos
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Kerala, India
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                Contact Burggy
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                support@burggy.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © 2026 Burggy.
+                All rights reserved.
+            </p>
+
+
+            <p>
+                Made with
+                <i class="fa-solid fa-heart"></i>
+                for food lovers.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="js/script.js"></script>
+
+<script src="js/menu.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,828 @@
+/* =========================================================
+   BURGGY
+   SUCCESS PAGE — PREMIUM THEME
+   Black / White / Orange
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.success-page {
+    min-height: 100vh;
+    background: #080808;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SUCCESS HERO
+========================================================= */
+
+.success-hero {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 150px 20px 90px;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(255, 122, 0, 0.16), transparent 34%),
+        linear-gradient(180deg, #0c0c0c 0%, #080808 100%);
+}
+
+.success-hero::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 122, 0, 0.12);
+    box-shadow:
+        0 0 80px rgba(255, 122, 0, 0.08),
+        inset 0 0 80px rgba(255, 122, 0, 0.04);
+    pointer-events: none;
+}
+
+.success-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.025) 1px,
+        transparent 1px
+    );
+    background-size: 100% 60px;
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        transparent 90%
+    );
+    pointer-events: none;
+}
+
+.success-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SUCCESS ICON
+========================================================= */
+
+.success-icon {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 122, 0, 0.45);
+    background: rgba(255, 122, 0, 0.08);
+    box-shadow:
+        0 0 0 10px rgba(255, 122, 0, 0.035),
+        0 0 55px rgba(255, 122, 0, 0.12);
+}
+
+.success-icon i {
+    font-size: 38px;
+    color: #ff7a00;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.success-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: #ff7a00;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.success-eyebrow::before,
+.success-eyebrow::after {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: rgba(255, 122, 0, 0.55);
+}
+
+.success-hero h1 {
+    margin: 0;
+    font-size: clamp(38px, 5vw, 66px);
+    line-height: 1.04;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #ffffff;
+}
+
+.success-hero h1 span {
+    color: #ff7a00;
+}
+
+.success-hero p {
+    max-width: 600px;
+    margin: 22px auto 0;
+    color: #a8a8a8;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.success-section {
+    padding: 80px 20px 110px;
+    background: #080808;
+}
+
+.success-container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   ORDER CARD
+========================================================= */
+
+.success-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #252525;
+    border-radius: 24px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.012)
+        ),
+        #101010;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+}
+
+.success-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff7a00,
+        transparent
+    );
+}
+
+.success-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 28px 32px;
+    border-bottom: 1px solid #242424;
+}
+
+.success-card-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.success-card-header p {
+    margin: 6px 0 0;
+    color: #777777;
+    font-size: 13px;
+}
+
+.order-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border: 1px solid rgba(255, 122, 0, 0.28);
+    border-radius: 999px;
+    background: rgba(255, 122, 0, 0.07);
+    color: #ff9b45;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.order-status i {
+    font-size: 8px;
+    color: #ff7a00;
+}
+
+
+/* =========================================================
+   ORDER DETAILS
+========================================================= */
+
+.order-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid #242424;
+}
+
+.order-detail {
+    padding: 24px 26px;
+    border-right: 1px solid #242424;
+}
+
+.order-detail:last-child {
+    border-right: none;
+}
+
+.order-detail-label {
+    display: block;
+    margin-bottom: 9px;
+    color: #666666;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.order-detail-value {
+    display: block;
+    color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.order-detail-value.highlight {
+    color: #ff7a00;
+}
+
+
+/* =========================================================
+   DELIVERY ADDRESS
+========================================================= */
+
+.delivery-address {
+    padding: 26px 32px;
+    border-bottom: 1px solid #242424;
+}
+
+.delivery-address-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.delivery-address-header i {
+    color: #ff7a00;
+    font-size: 15px;
+}
+
+.delivery-address-header span {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+#deliveryAddress {
+    margin: 0;
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ORDER ITEMS
+========================================================= */
+
+.success-items {
+    padding: 8px 32px 12px;
+}
+
+.success-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid #202020;
+}
+
+.success-item:last-child {
+    border-bottom: none;
+}
+
+.success-item-image {
+    width: 68px;
+    height: 68px;
+    flex: 0 0 68px;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid #292929;
+    background: #171717;
+}
+
+.success-item-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.success-item-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.success-item-info h4 {
+    margin: 0 0 6px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.success-item-info p {
+    margin: 0;
+    color: #707070;
+    font-size: 12px;
+}
+
+.success-item-price {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ORDER TOTAL
+========================================================= */
+
+.success-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 32px;
+    border-top: 1px solid #292929;
+    background: rgba(255, 122, 0, 0.035);
+}
+
+.success-total-label {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.success-total-value {
+    color: #ff7a00;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   NEXT STEPS
+========================================================= */
+
+.success-next {
+    margin-top: 45px;
+}
+
+.success-next-heading {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.success-next-heading h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.success-next-heading p {
+    margin: 8px 0 0;
+    color: #707070;
+    font-size: 13px;
+}
+
+.success-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.success-step {
+    position: relative;
+    padding: 26px 24px;
+    border: 1px solid #242424;
+    border-radius: 18px;
+    background: #0f0f0f;
+    text-align: center;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.success-step:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 122, 0, 0.35);
+    background: #121212;
+}
+
+.success-step-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(255, 122, 0, 0.08);
+    color: #ff7a00;
+}
+
+.success-step-icon i {
+    font-size: 18px;
+}
+
+.success-step h4 {
+    margin: 0 0 7px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.success-step p {
+    margin: 0;
+    color: #6f6f6f;
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.success-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 42px;
+}
+
+.success-actions .btn {
+    min-width: 170px;
+    min-height: 50px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.success-actions .btn-primary {
+    background: #ff7a00;
+    color: #ffffff;
+    border: 1px solid #ff7a00;
+    box-shadow: 0 10px 28px rgba(255, 122, 0, 0.16);
+}
+
+.success-actions .btn-primary:hover {
+    background: #ff8a1f;
+    border-color: #ff8a1f;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(255, 122, 0, 0.22);
+}
+
+.success-actions .btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #353535;
+}
+
+.success-actions .btn-outline:hover {
+    color: #ff7a00;
+    border-color: #ff7a00;
+    background: rgba(255, 122, 0, 0.05);
+}
+
+
+/* =========================================================
+   TRUST MESSAGE
+========================================================= */
+
+.success-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 25px;
+    color: #5f5f5f;
+    font-size: 11px;
+}
+
+.success-trust i {
+    color: #ff7a00;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   EMPTY / LOADING STATES
+========================================================= */
+
+.success-loading,
+.success-empty {
+    padding: 55px 20px;
+    text-align: center;
+    color: #777777;
+}
+
+.success-loading i {
+    margin-bottom: 12px;
+    color: #ff7a00;
+    font-size: 24px;
+}
+
+.success-empty i {
+    display: block;
+    margin-bottom: 14px;
+    color: #ff7a00;
+    font-size: 30px;
+}
+
+.success-loading p,
+.success-empty p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ERROR / MESSAGE
+========================================================= */
+
+.success-message {
+    margin: 0 32px 25px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 70, 70, 0.25);
+    border-radius: 10px;
+    background: rgba(255, 70, 70, 0.06);
+    color: #ff8585;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   MOBILE NAV SUPPORT
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .order-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .order-detail:nth-child(2) {
+        border-right: none;
+    }
+
+    .order-detail:nth-child(-n + 2) {
+        border-bottom: 1px solid #242424;
+    }
+
+    .success-steps {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .success-hero {
+        min-height: 390px;
+        padding: 130px 20px 70px;
+    }
+
+    .success-icon {
+        width: 78px;
+        height: 78px;
+        margin-bottom: 22px;
+    }
+
+    .success-icon i {
+        font-size: 31px;
+    }
+
+    .success-hero h1 {
+        letter-spacing: -1.3px;
+    }
+
+    .success-hero p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .success-section {
+        padding: 55px 16px 80px;
+    }
+
+    .success-card {
+        border-radius: 18px;
+    }
+
+    .success-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 23px;
+    }
+
+    .order-status {
+        align-self: flex-start;
+    }
+
+    .delivery-address {
+        padding: 23px;
+    }
+
+    .success-items {
+        padding-left: 23px;
+        padding-right: 23px;
+    }
+
+    .success-total {
+        padding: 21px 23px;
+    }
+
+    .success-next {
+        margin-top: 38px;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .success-actions .btn {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .success-message {
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .success-hero {
+        min-height: 360px;
+        padding: 115px 16px 60px;
+    }
+
+    .success-hero::before {
+        width: 350px;
+        height: 350px;
+        top: -175px;
+    }
+
+    .success-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .success-eyebrow::before,
+    .success-eyebrow::after {
+        width: 15px;
+    }
+
+    .success-hero h1 {
+        font-size: 37px;
+    }
+
+    .success-hero p {
+        font-size: 13px;
+    }
+
+    .success-section {
+        padding: 42px 12px 65px;
+    }
+
+    .order-details {
+        grid-template-columns: 1fr;
+    }
+
+    .order-detail {
+        border-right: none;
+        border-bottom: 1px solid #242424;
+        padding: 19px 21px;
+    }
+
+    .order-detail:last-child {
+        border-bottom: none;
+    }
+
+    .success-item {
+        gap: 12px;
+        padding: 17px 0;
+    }
+
+    .success-item-image {
+        width: 55px;
+        height: 55px;
+        flex-basis: 55px;
+        border-radius: 11px;
+    }
+
+    .success-item-info h4 {
+        font-size: 13px;
+    }
+
+    .success-item-info p {
+        font-size: 11px;
+    }
+
+    .success-item-price {
+        font-size: 13px;
+    }
+
+    .success-total-value {
+        font-size: 21px;
+    }
+
+    .success-step {
+        padding: 22px 18px;
+    }
+
+    .success-trust {
+        text-align: center;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .success-hero h1 {
+        font-size: 32px;
+    }
+
+    .success-card-header h2 {
+        font-size: 18px;
+    }
+
+    .success-total {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .success-total-value {
+        font-size: 22px;
+    }
+
+}

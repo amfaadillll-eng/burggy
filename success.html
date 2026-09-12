@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Order Confirmed | Burggy</title>
+
+    <meta
+        name="description"
+        content="Your Burggy order has been successfully placed."
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Burggy CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/success.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+</head>
+
+
+<body class="success-page">
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-container">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Burggy Home"
+            >
+
+                <img
+                    src="images/burggylogo.png"
+                    alt="Burggy"
+                >
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="index.html#offers">
+                    Offers
+                </a>
+
+                <a href="index.html#gallery">
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+
+                <!-- WISHLIST -->
+
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    aria-label="Wishlist"
+                >
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <span
+                        class="nav-count wishlist-count"
+                        id="wishlistCount"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- CART -->
+
+                <a
+                    href="cart.html"
+                    class="nav-icon"
+                    aria-label="Shopping cart"
+                >
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="nav-count cart-count"
+                        id="cartCount"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- ORDER BUTTON -->
+
+                <a
+                    href="menu.html"
+                    class="btn btn-primary nav-order-btn"
+                >
+                    Order Now
+                </a>
+
+
+            </div>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="mobile-menu-btn"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         SUCCESS HERO
+    ====================================================== -->
+
+    <main>
+
+
+        <section class="success-hero">
+
+            <div class="success-hero-content">
+
+
+                <!-- SUCCESS ICON -->
+
+                <div class="success-icon-wrap">
+
+                    <div class="success-icon">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EYEBROW -->
+
+                <span class="success-eyebrow">
+                    ORDER CONFIRMED
+                </span>
+
+
+                <!-- TITLE -->
+
+                <h1>
+                    Your order is
+                    <span>on its way.</span>
+                </h1>
+
+
+                <p>
+                    Thank you for ordering from Burggy.
+                    Your delicious food is being prepared.
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ORDER CONFIRMATION
+        ================================================== -->
+
+        <section class="success-section">
+
+            <div class="container success-container">
+
+
+                <!-- ORDER CARD -->
+
+                <div class="success-card">
+
+
+                    <div class="success-card-header">
+
+                        <div>
+
+                            <span class="success-label">
+                                ORDER DETAILS
+                            </span>
+
+                            <h2>
+                                Order confirmed
+                            </h2>
+
+                        </div>
+
+
+                        <div class="order-status">
+
+                            <span class="status-dot"></span>
+
+                            Confirmed
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ORDER NUMBER -->
+
+                    <div class="order-number-box">
+
+                        <div class="order-number-icon">
+
+                            <i class="fa-solid fa-receipt"></i>
+
+                        </div>
+
+
+                        <div class="order-number-info">
+
+                            <span>
+                                Order ID
+                            </span>
+
+                            <strong id="orderId">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- CUSTOMER DETAILS -->
+
+                    <div class="success-details-grid">
+
+
+                        <div class="success-detail">
+
+                            <span class="detail-label">
+                                Customer
+                            </span>
+
+                            <strong id="customerName">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="success-detail">
+
+                            <span class="detail-label">
+                                Phone
+                            </span>
+
+                            <strong id="customerPhone">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="success-detail">
+
+                            <span class="detail-label">
+                                City
+                            </span>
+
+                            <strong id="customerCity">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="success-detail">
+
+                            <span class="detail-label">
+                                Payment
+                            </span>
+
+                            <strong id="paymentMethod">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- DELIVERY ADDRESS -->
+
+                    <div class="delivery-address">
+
+                        <div class="delivery-address-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Delivering to
+                            </span>
+
+                            <strong id="deliveryAddress">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ORDER ITEMS -->
+
+                    <div class="success-items-section">
+
+                        <div class="success-section-heading">
+
+                            <h3>
+                                Your items
+                            </h3>
+
+                            <span id="itemCount">
+                                0 items
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="success-items"
+                            id="successItems"
+                        >
+
+                            <div class="success-loading">
+
+                                <i class="fa-solid fa-spinner fa-spin"></i>
+
+                                <span>
+                                    Loading order details...
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TOTAL -->
+
+                    <div class="success-total">
+
+                        <span>
+                            Total paid
+                        </span>
+
+                        <strong id="orderTotal">
+                            ₹0.00
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     NEXT STEPS
+                ================================================== -->
+
+                <div class="success-next">
+
+
+                    <div class="success-next-header">
+
+                        <span class="success-label">
+                            WHAT'S NEXT
+                        </span>
+
+                        <h2>
+                            Sit back. We've got it.
+                        </h2>
+
+                        <p>
+                            Your order has been sent to the Burggy
+                            kitchen and will be prepared shortly.
+                        </p>
+
+                    </div>
+
+
+                    <div class="next-steps-grid">
+
+
+                        <!-- STEP 1 -->
+
+                        <div class="next-step">
+
+                            <div class="next-step-icon">
+
+                                <i class="fa-solid fa-fire-burner"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    01
+                                </span>
+
+                                <h3>
+                                    Preparing
+                                </h3>
+
+                                <p>
+                                    Our kitchen is preparing
+                                    your order fresh.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- STEP 2 -->
+
+                        <div class="next-step">
+
+                            <div class="next-step-icon">
+
+                                <i class="fa-solid fa-box"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    02
+                                </span>
+
+                                <h3>
+                                    Packing
+                                </h3>
+
+                                <p>
+                                    Your food will be packed
+                                    carefully for delivery.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- STEP 3 -->
+
+                        <div class="next-step">
+
+                            <div class="next-step-icon">
+
+                                <i class="fa-solid fa-motorcycle"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    03
+                                </span>
+
+                                <h3>
+                                    On the way
+                                </h3>
+
+                                <p>
+                                    Your order will soon be
+                                    heading your way.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ACTIONS
+                ================================================== -->
+
+                <div class="success-actions">
+
+                    <a
+                        href="menu.html"
+                        class="btn btn-primary"
+                    >
+
+                        <i class="fa-solid fa-utensils"></i>
+
+                        Order More
+
+                    </a>
+
+
+                    <a
+                        href="index.html"
+                        class="btn btn-outline"
+                    >
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Back to Home
+
+                    </a>
+
+                </div>
+
+
+                <!-- TRUST -->
+
+                <div class="success-trust">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <span>
+                        Thank you for choosing Burggy.
+                        Fresh food. Bold flavour. Always.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+
+            <div class="footer-grid">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="footer-logo"
+                    >
+
+                        <img
+                            src="images/burggylogo.png"
+                            alt="Burggy"
+                        >
+
+                    </a>
+
+
+                    <p>
+                        Big flavours. Fresh ingredients.
+                        Burgers, rolls, loaded fries and
+                        more — made for cravings.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="WhatsApp"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="menu.html">
+                        Menu
+                    </a>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- HELP -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Help
+                    </h3>
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                    <a href="wishlist.html">
+                        Wishlist
+                    </a>
+
+                    <a href="menu.html">
+                        Order Food
+                    </a>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <a href="tel:+910000000000">
+                        <i class="fa-solid fa-phone"></i>
+                        Call Burggy
+                    </a>
+
+                    <a href="mailto:hello@burggy.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        hello@burggy.com
+                    </a>
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Your city, Kerala
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Burggy. All rights reserved.
+                </span>
+
+                <span>
+                    Made with <i class="fa-solid fa-heart"></i>
+                    for food lovers.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+
+    <script src="js/success.js"></script>
+
+
+</body>
+
+</html>

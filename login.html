@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Login to your Burggy account and order your favourites."
+    >
+
+    <title>Login | Burggy</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Animations -->
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="login-page">
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo" aria-label="Burggy Home">
+                <img
+                    src="images/burggylogo.png"
+                    alt="Burggy"
+                >
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-links" aria-label="Main navigation">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="index.html#offers">
+                    Offers
+                </a>
+
+                <a href="index.html#gallery">
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+
+                <!-- Wishlist -->
+                <a
+                    href="wishlist.html"
+                    class="nav-icon-btn"
+                    aria-label="Wishlist"
+                    title="Wishlist"
+                >
+                    <i class="fa-regular fa-heart"></i>
+                    <span
+                        class="nav-count wishlist-count"
+                        id="wishlistCount"
+                    >0</span>
+                </a>
+
+                <!-- Cart -->
+                <a
+                    href="cart.html"
+                    class="nav-icon-btn"
+                    aria-label="Cart"
+                    title="Cart"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span
+                        class="nav-count cart-count"
+                        id="cartCount"
+                    >0</span>
+                </a>
+
+                <!-- Order Button -->
+                <a
+                    href="menu.html"
+                    class="btn btn-primary nav-order-btn"
+                >
+                    Order Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div
+            class="mobile-nav"
+            id="mobileNav"
+        >
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="menu.html">
+                <i class="fa-solid fa-utensils"></i>
+                Menu
+            </a>
+
+            <a href="index.html#offers">
+                <i class="fa-solid fa-tag"></i>
+                Offers
+            </a>
+
+            <a href="index.html#gallery">
+                <i class="fa-regular fa-images"></i>
+                Gallery
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i>
+                About
+            </a>
+
+            <a href="contact.html">
+                <i class="fa-regular fa-envelope"></i>
+                Contact
+            </a>
+
+            <a href="wishlist.html">
+                <i class="fa-regular fa-heart"></i>
+                Wishlist
+            </a>
+
+            <a href="cart.html">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Cart
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         LOGIN HERO
+    ====================================================== -->
+
+    <main>
+
+        <section class="login-hero">
+
+            <div class="login-hero-glow login-hero-glow-one"></div>
+            <div class="login-hero-glow login-hero-glow-two"></div>
+
+            <div class="login-hero-content">
+
+                <span class="login-eyebrow">
+                    <span></span>
+                    Welcome back
+                    <span></span>
+                </span>
+
+                <h1>
+                    Good food
+                    <strong>starts here.</strong>
+                </h1>
+
+                <p>
+                    Sign in to your Burggy account and get back
+                    to your favourites.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LOGIN SECTION
+        ================================================== -->
+
+        <section class="login-section">
+
+            <div class="login-container">
+
+                <!-- Decorative Side -->
+                <div class="login-showcase">
+
+                    <div class="login-showcase-glow"></div>
+
+                    <div class="login-showcase-content">
+
+                        <span class="login-showcase-label">
+                            BURGGY
+                        </span>
+
+                        <h2>
+                            Cravings
+                            <span>solved.</span>
+                        </h2>
+
+                        <p>
+                            Your favourite meals, saved details,
+                            and faster checkout — all in one place.
+                        </p>
+
+                        <div class="login-benefits">
+
+                            <div class="login-benefit">
+                                <div class="login-benefit-icon">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Quick ordering</strong>
+                                    <span>
+                                        Order your favourites faster.
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="login-benefit">
+                                <div class="login-benefit-icon">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Save favourites</strong>
+                                    <span>
+                                        Keep the food you love close.
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="login-benefit">
+                                <div class="login-benefit-icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Secure checkout</strong>
+                                    <span>
+                                        Your account stays protected.
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="login-showcase-mark">
+                        <i class="fa-solid fa-burger"></i>
+                    </div>
+
+                </div>
+
+
+                <!-- Login Card -->
+                <div class="login-card">
+
+                    <div class="login-card-header">
+
+                        <div class="login-card-icon">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </div>
+
+                        <div>
+                            <span class="login-card-label">
+                                ACCOUNT
+                            </span>
+
+                            <h2>
+                                Welcome back
+                            </h2>
+
+                            <p>
+                                Login to continue to Burggy.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Login Form -->
+                    <form
+                        id="loginForm"
+                        class="login-form"
+                        novalidate
+                    >
+
+                        <!-- Email -->
+                        <div class="login-form-group">
+
+                            <label for="email">
+                                Email address
+                            </label>
+
+                            <div class="login-input-wrap">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Password -->
+                        <div class="login-form-group">
+
+                            <div class="login-label-row">
+
+                                <label for="password">
+                                    Password
+                                </label>
+
+                            </div>
+
+                            <div class="login-input-wrap">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="login-password-toggle"
+                                    id="togglePassword"
+                                    aria-label="Show password"
+                                    title="Show password"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Remember -->
+                        <div class="login-options">
+
+                            <label class="login-check">
+
+                                <input
+                                    type="checkbox"
+                                    id="rememberMe"
+                                    name="rememberMe"
+                                >
+
+                                <span class="login-check-box">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Submit -->
+                        <button
+                            type="submit"
+                            class="login-submit btn btn-primary"
+                        >
+                            <span>Login to Burggy</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+
+                        <!-- Message area -->
+                        <div
+                            class="login-message"
+                            id="loginMessage"
+                            aria-live="polite"
+                        ></div>
+
+                    </form>
+
+
+                    <!-- Divider -->
+                    <div class="login-divider">
+                        <span>or</span>
+                    </div>
+
+
+                    <!-- Register -->
+                    <div class="login-register">
+
+                        <p>
+                            Don't have an account?
+                        </p>
+
+                        <a href="register.html">
+                            Create an account
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- Security -->
+                    <div class="login-security">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Your account information is securely handled.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="login-cta">
+
+            <div class="login-cta-inner">
+
+                <div>
+                    <span class="login-cta-label">
+                        STILL HUNGRY?
+                    </span>
+
+                    <h2>
+                        Explore the menu.
+                    </h2>
+                </div>
+
+                <a
+                    href="menu.html"
+                    class="btn btn-outline"
+                >
+                    View Menu
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+
+                    <a href="index.html" class="footer-logo">
+                        <img
+                            src="images/burggylogo.png"
+                            alt="Burggy"
+                        >
+                    </a>
+
+                    <p>
+                        Bold flavours. Fresh ingredients.
+                        Burgers, rolls, fries and more made
+                        for serious cravings.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="WhatsApp"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="menu.html">
+                        Menu
+                    </a>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- Account -->
+                <div class="footer-column">
+
+                    <h3>Account</h3>
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                    <a href="register.html">
+                        Register
+                    </a>
+
+                    <a href="wishlist.html">
+                        Wishlist
+                    </a>
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                </div>
+
+
+                <!-- Contact -->
+                <div class="footer-column">
+
+                    <h3>Get in touch</h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Kerala, India
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +91 XXXXX XXXXX
+                    </p>
+
+                    <p>
+                        <i class="fa-regular fa-envelope"></i>
+                        hello@burggy.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Burggy. All rights reserved.
+                </p>
+
+                <div>
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+
+
+    <!-- Small password visibility enhancement -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const password = document.getElementById("password");
+            const toggle = document.getElementById("togglePassword");
+
+            if (password && toggle) {
+
+                toggle.addEventListener("click", () => {
+
+                    const isPassword =
+                        password.type === "password";
+
+                    password.type =
+                        isPassword ? "text" : "password";
+
+                    toggle.innerHTML = isPassword
+                        ? '<i class="fa-regular fa-eye-slash"></i>'
+                        : '<i class="fa-regular fa-eye"></i>';
+
+                    toggle.setAttribute(
+                        "aria-label",
+                        isPassword
+                            ? "Hide password"
+                            : "Show password"
+                    );
+
+                });
+
+            }
+
+        });
+    </script>
+
+</body>
+</html>

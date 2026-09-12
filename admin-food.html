@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Burggy Admin - Food Menu Management"
+    >
+
+    <title>Burggy Admin | Food Menu</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         STYLES
+    ====================================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/admin.css">
+
+    <link rel="stylesheet" href="css/admin-food.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/animations.css">
+
+</head>
+
+
+<body class="admin-page">
+
+
+    <!-- =====================================================
+         ADMIN NAVBAR
+    ====================================================== -->
+
+    <header class="admin-navbar">
+
+        <div class="admin-navbar-left">
+
+            <button
+                type="button"
+                class="admin-mobile-menu"
+                id="adminMobileMenu"
+                aria-label="Open admin menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <a
+                href="index.html"
+                class="admin-brand"
+            >
+
+                <img
+                    src="images/burggylogo.png"
+                    alt="Burggy"
+                >
+
+                <div class="admin-brand-text">
+
+                    <strong>BURGGY</strong>
+
+                    <span>ADMIN PANEL</span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <div class="admin-navbar-right">
+
+            <a
+                href="index.html"
+                class="admin-view-site"
+            >
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                <span>View Site</span>
+
+            </a>
+
+
+            <div class="admin-profile" id="adminProfileBtn">
+
+                <div class="admin-profile-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+
+                <div class="admin-profile-info">
+
+                    <strong>Administrator</strong>
+
+                    <span>
+                        <i class="fa-solid fa-circle"></i>
+                        Online
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+        <div class="admin-sidebar-inner">
+
+
+            <!-- MAIN MENU -->
+
+            <div class="admin-sidebar-group">
+
+                <span class="admin-sidebar-label">
+                    MAIN MENU
+                </span>
+
+
+                <a
+                    href="admin.html#dashboard"
+                    class="admin-menu-item"
+                >
+
+                    <span class="admin-menu-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </span>
+
+                    <span class="admin-menu-text">
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="admin.html#orders"
+                    class="admin-menu-item"
+                >
+
+                    <span class="admin-menu-icon">
+                        <i class="fa-solid fa-receipt"></i>
+                    </span>
+
+                    <span class="admin-menu-text">
+                        Orders
+                    </span>
+
+                    <span
+                        class="admin-menu-count"
+                        id="sidebarOrderCount"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="admin-food.html"
+                    class="admin-menu-item active"
+                >
+
+                    <span class="admin-menu-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </span>
+
+                    <span class="admin-menu-text">
+                        Food Menu
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="admin-sidebar-group">
+
+                <span class="admin-sidebar-label">
+                    QUICK LINKS
+                </span>
+
+
+                <a
+                    href="menu.html"
+                    class="admin-menu-item"
+                >
+
+                    <span class="admin-menu-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+
+                    <span class="admin-menu-text">
+                        View Menu
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="index.html"
+                    class="admin-menu-item"
+                >
+
+                    <span class="admin-menu-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    <span class="admin-menu-text">
+                        Homepage
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- SYSTEM -->
+
+            <div class="admin-sidebar-system">
+
+                <div class="admin-system-status">
+
+                    <span class="admin-system-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            System Online
+                        </strong>
+
+                        <small>
+                            Burggy API connected
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="admin-content admin-food-content">
+
+
+        <!-- =================================================
+             PAGE HEADER
+        ================================================== -->
+
+        <section class="admin-page-header">
+
+            <div>
+
+                <span class="admin-eyebrow">
+                    MENU MANAGEMENT
+                </span>
+
+                <h1>
+                    Food Menu
+                </h1>
+
+                <p>
+                    Add, manage and remove food items from your Burggy menu.
+                </p>
+
+            </div>
+
+
+            <div class="admin-page-header-action">
+
+                <a
+                    href="menu.html"
+                    class="admin-secondary-button"
+                >
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View Live Menu
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ADD FOOD SECTION
+        ================================================== -->
+
+        <section
+            class="admin-food-add-section"
+            id="addFood"
+        >
+
+            <div class="admin-section-header">
+
+                <div>
+
+                    <span class="admin-section-eyebrow">
+                        NEW MENU ITEM
+                    </span>
+
+                    <h2>
+                        Add Food
+                    </h2>
+
+                    <p>
+                        Create a new item and publish it to the menu.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-food-form-card">
+
+
+                <div class="admin-food-form-intro">
+
+                    <div class="admin-food-form-icon">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Add a new food item
+                        </strong>
+
+                        <span>
+                            Fill in the details below.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <form
+                    id="foodForm"
+                    enctype="multipart/form-data"
+                    novalidate
+                >
+
+
+                    <!-- NAME -->
+
+                    <div class="admin-food-form-grid">
+
+
+                        <div class="admin-food-form-group">
+
+                            <label for="foodName">
+                                Food Name
+                            </label>
+
+                            <div class="admin-food-input-wrap">
+
+                                <i class="fa-solid fa-burger"></i>
+
+                                <input
+                                    type="text"
+                                    id="foodName"
+                                    name="name"
+                                    placeholder="e.g. Crispy Chicken Burger"
+                                    autocomplete="off"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CATEGORY -->
+
+                        <div class="admin-food-form-group">
+
+                            <label for="foodCategory">
+                                Category
+                            </label>
+
+                            <div class="admin-food-input-wrap">
+
+                                <i class="fa-solid fa-layer-group"></i>
+
+                                <select
+                                    id="foodCategory"
+                                    name="category"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select category
+                                    </option>
+
+                                    <option value="Shawarma & Crispy Roll">
+                                        Shawarma & Crispy Roll
+                                    </option>
+
+                                    <option value="Loaded Fries & Cheese Fries">
+                                        Loaded Fries & Cheese Fries
+                                    </option>
+
+                                    <option value="Chicken Fried Combos">
+                                        Chicken Fried Combos
+                                    </option>
+
+                                    <option value="Burger & Sandwich">
+                                        Burger & Sandwich
+                                    </option>
+
+                                    <option value="Snacks">
+                                        Snacks
+                                    </option>
+
+                                    <option value="Drinks">
+                                        Drinks
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PRICE -->
+
+                        <div class="admin-food-form-group">
+
+                            <label for="foodPrice">
+                                Price
+                            </label>
+
+                            <div class="admin-food-input-wrap">
+
+                                <span class="admin-food-currency">
+                                    ₹
+                                </span>
+
+                                <input
+                                    type="number"
+                                    id="foodPrice"
+                                    name="price"
+                                    placeholder="0"
+                                    min="1"
+                                    step="1"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- IMAGE -->
+
+                        <div class="admin-food-form-group">
+
+                            <label for="foodImage">
+                                Food Image
+                            </label>
+
+                            <div class="admin-food-file-wrap">
+
+                                <input
+                                    type="file"
+                                    id="foodImage"
+                                    name="image"
+                                    accept="image/*"
+                                >
+
+                                <label
+                                    for="foodImage"
+                                    class="admin-food-file-label"
+                                >
+
+                                    <span class="admin-food-file-icon">
+
+                                        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                                    </span>
+
+                                    <span class="admin-food-file-text">
+
+                                        <strong>
+                                            Choose image
+                                        </strong>
+
+                                        <small>
+                                            JPG, PNG or WEBP
+                                        </small>
+
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="admin-food-form-group admin-food-description-group">
+
+                        <label for="foodDescription">
+                            Description
+                        </label>
+
+                        <div class="admin-food-textarea-wrap">
+
+                            <i class="fa-solid fa-align-left"></i>
+
+                            <textarea
+                                id="foodDescription"
+                                name="description"
+                                rows="4"
+                                placeholder="Describe the food item..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FORM FOOTER -->
+
+                    <div class="admin-food-form-footer">
+
+                        <p>
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            New items will be available on the live menu immediately.
+
+                        </p>
+
+
+                        <button
+                            type="submit"
+                            class="admin-primary-button"
+                            id="addFoodBtn"
+                        >
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Add Food
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOD LIST
+        ================================================== -->
+
+        <section
+            class="admin-food-list-section"
+            id="foodList"
+        >
+
+
+            <div class="admin-section-header">
+
+                <div>
+
+                    <span class="admin-section-eyebrow">
+                        CURRENT MENU
+                    </span>
+
+                    <h2>
+                        Manage Food
+                    </h2>
+
+                    <p>
+                        Review the food currently available on your menu.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-food-list-actions">
+
+                    <span
+                        class="admin-food-total"
+                        id="foodTotal"
+                    >
+                        0 items
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="admin-secondary-button"
+                        id="refreshFoods"
+                    >
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        Refresh
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOADING -->
+
+            <div
+                class="admin-food-loading"
+                id="foodLoading"
+            >
+
+                <div class="admin-food-loading-icon">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                </div>
+
+                <strong>
+                    Loading food menu...
+                </strong>
+
+                <span>
+                    Fetching the latest items from Burggy.
+                </span>
+
+            </div>
+
+
+
+            <!-- ERROR -->
+
+            <div
+                class="admin-food-error"
+                id="foodError"
+                hidden
+            >
+
+                <div class="admin-food-error-icon">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Unable to load food menu
+                    </strong>
+
+                    <span>
+                        Make sure the Burggy backend is running.
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-secondary-button"
+                    id="retryFoods"
+                >
+
+                    <i class="fa-solid fa-rotate-right"></i>
+
+                    Retry
+
+                </button>
+
+            </div>
+
+
+
+            <!-- EMPTY -->
+
+            <div
+                class="admin-food-empty"
+                id="foodEmpty"
+                hidden
+            >
+
+                <div class="admin-food-empty-icon">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                </div>
+
+                <strong>
+                    No food items yet
+                </strong>
+
+                <span>
+                    Add your first menu item using the form above.
+                </span>
+
+            </div>
+
+
+
+            <!-- FOOD GRID -->
+
+            <div
+                class="admin-food-grid"
+                id="foodContainer"
+            ></div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="admin-footer">
+
+            <div>
+
+                <strong>
+                    BURGGY
+                </strong>
+
+                <span>
+                    Admin Dashboard
+                </span>
+
+            </div>
+
+            <p>
+                © 2026 Burggy. All rights reserved.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="admin-toast"
+        id="adminToast"
+        role="status"
+        aria-live="polite"
+    >
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span id="adminToastMessage">
+            Food updated successfully
+        </span>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script src="js/admin-food.js"></script>
+
+</body>
+
+</html>

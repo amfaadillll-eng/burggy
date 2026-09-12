@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Your Burggy shopping cart."
+    >
+
+    <title>Burggy | Your Cart</title>
+
+    <!-- Google Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Burggy CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/cart.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/animations.css"
+    >
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <!-- Logo -->
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            <img
+                src="images/burggylogo.png"
+                alt="Burggy"
+            >
+        </a>
+
+
+        <!-- Navigation -->
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="index.html#offers">
+                Offers
+            </a>
+
+            <a href="index.html#gallery">
+                Gallery
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- Navigation Actions -->
+
+        <div class="nav-actions">
+
+            <a
+                href="wishlist.html"
+                class="nav-icon"
+                aria-label="Wishlist"
+            >
+                <i class="fa-regular fa-heart"></i>
+
+                <span
+                    class="wishlist-count"
+                    id="wishlistCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+            <a
+                href="cart.html"
+                class="nav-icon active"
+                aria-label="Cart"
+            >
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+            <a
+                href="menu.html"
+                class="btn btn-primary nav-order-btn"
+            >
+                Order Now
+            </a>
+
+        </div>
+
+
+        <!-- Mobile Menu Button -->
+
+        <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Open menu"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     CART HERO
+===================================================== -->
+
+<section class="cart-hero">
+
+    <div class="container">
+
+        <div class="cart-hero-content">
+
+            <span class="section-eyebrow">
+                YOUR BURGGY ORDER
+            </span>
+
+            <h1>
+                Your <span>Cart</span>
+            </h1>
+
+            <p>
+                Everything you've picked, ready to become
+                your next delicious meal.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CART SECTION
+===================================================== -->
+
+<main>
+
+<section class="cart-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="section-heading-row">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    ORDER DETAILS
+                </span>
+
+                <h2 class="section-heading">
+                    Your <span>Basket</span>
+                </h2>
+
+            </div>
+
+            <a
+                href="menu.html"
+                class="continue-shopping"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+                Continue Shopping
+            </a>
+
+        </div>
+
+
+        <!-- Cart Layout -->
+
+        <div class="cart-container">
+
+
+            <!-- =================================================
+                 CART ITEMS
+            ================================================== -->
+
+            <div class="cart-items">
+
+                <!--
+                    cart.js dynamically loads the
+                    user's cart here.
+                -->
+
+                <div class="cart-loading">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                    <span>
+                        Loading your cart...
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ORDER SUMMARY
+            ================================================== -->
+
+            <aside class="summary">
+
+                <div class="summary-header">
+
+                    <span class="summary-label">
+                        ORDER SUMMARY
+                    </span>
+
+                    <h2>
+                        Your Order
+                    </h2>
+
+                </div>
+
+
+                <div class="summary-content">
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <span>
+                            ₹0
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Delivery
+                        </span>
+
+                        <span>
+                            ₹0
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <span>
+                            ₹0
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="checkout"
+                        disabled
+                    >
+                        <span>
+                            Proceed To Checkout
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <div class="secure-checkout">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Secure &amp; reliable ordering
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY ORDER FROM BURGGY
+===================================================== -->
+
+<section class="cart-benefits">
+
+    <div class="container">
+
+        <div class="cart-benefits-grid">
+
+
+            <div class="cart-benefit">
+
+                <div class="cart-benefit-icon">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Fresh &amp; Fast
+                    </h3>
+
+                    <p>
+                        Your food is prepared fresh
+                        when you order.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="cart-benefit">
+
+                <div class="cart-benefit-icon">
+
+                    <i class="fa-solid fa-burger"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Quality Ingredients
+                    </h3>
+
+                    <p>
+                        Great taste starts with
+                        quality ingredients.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="cart-benefit">
+
+                <div class="cart-benefit-icon">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Easy Delivery
+                    </h3>
+
+                    <p>
+                        A simple ordering experience
+                        from cart to doorstep.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    <img
+                        src="images/burggylogo.png"
+                        alt="Burggy"
+                    >
+                </a>
+
+                <p>
+                    Big flavours. Fresh ingredients.
+                    That's the Burggy way.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="WhatsApp"
+                    >
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Customer -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Customer
+                </h3>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Create Account
+                </a>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Get In Touch
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Kerala, India
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    Contact Burggy
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    hello@burggy.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Burggy. All Rights Reserved.
+            </p>
+
+            <p>
+                Made with
+                <span>♥</span>
+                for food lovers.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/script.js"></script>
+
+<script src="js/cart.js"></script>
+
+
+</body>
+
+</html>

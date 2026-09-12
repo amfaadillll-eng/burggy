@@ -1,0 +1,483 @@
+/* =========================================================
+   BURGGY — PREMIUM ANIMATIONS
+   PHASE 1
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE FADE
+   ========================================================= */
+
+body {
+    animation: pageFadeIn 0.6s ease forwards;
+}
+
+@keyframes pageFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   2. HERO REVEAL
+   ========================================================= */
+
+.hero-content {
+    animation:
+        heroContentReveal 1s
+        cubic-bezier(.22, 1, .36, 1)
+        forwards;
+}
+
+@keyframes heroContentReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   3. HERO BUTTON DELAY
+   ========================================================= */
+
+.hero-buttons {
+    opacity: 0;
+
+    animation:
+        buttonsReveal 0.8s
+        0.35s
+        cubic-bezier(.22, 1, .36, 1)
+        forwards;
+}
+
+@keyframes buttonsReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   4. SCROLL REVEAL
+   ========================================================= */
+
+.hidden {
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s
+        cubic-bezier(.22, 1, .36, 1);
+}
+
+.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   5. SCALE REVEAL
+   ========================================================= */
+
+.reveal-scale {
+    opacity: 0;
+
+    transform: scale(0.94);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s
+        cubic-bezier(.22, 1, .36, 1);
+}
+
+.reveal-scale.show {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   6. CARD HOVER
+   ========================================================= */
+
+.card,
+.food-card {
+    will-change: transform;
+}
+
+.card,
+.food-card,
+.btn,
+.btn-outline {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   7. IMAGE ZOOM
+   ========================================================= */
+
+.food-card img {
+    transform-origin: center;
+
+    will-change: transform;
+}
+
+
+/* =========================================================
+   8. BUTTON PRESS
+   ========================================================= */
+
+.btn:active,
+.btn-outline:active,
+.food-card button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   9. FLOATING ELEMENT
+   ========================================================= */
+
+.float {
+    animation:
+        premiumFloat
+        4s
+        ease-in-out
+        infinite;
+}
+
+@keyframes premiumFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* =========================================================
+   10. PULSE
+   ========================================================= */
+
+.pulse {
+    animation:
+        premiumPulse
+        2s
+        ease-in-out
+        infinite;
+}
+
+@keyframes premiumPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+}
+
+
+/* =========================================================
+   11. GLOW
+   ========================================================= */
+
+.glow {
+    animation:
+        orangeGlow
+        2.5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes orangeGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0
+            rgba(255, 107, 26, 0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px
+            rgba(255, 107, 26, 0.18);
+    }
+
+}
+
+
+/* =========================================================
+   12. NAVBAR LINK ANIMATION
+   ========================================================= */
+
+.nav-links a {
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-links a:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   13. CARD ICON ANIMATION
+   ========================================================= */
+
+.card i {
+    transition:
+        transform 0.35s
+        cubic-bezier(.22, 1, .36, 1),
+        color 0.3s ease;
+}
+
+.card:hover i {
+    transform:
+        translateY(-3px)
+        scale(1.08);
+}
+
+
+/* =========================================================
+   14. FOOD CARD IMAGE
+   ========================================================= */
+
+.food-card img {
+    transition:
+        transform 0.7s
+        cubic-bezier(.22, 1, .36, 1),
+        filter 0.5s ease;
+}
+
+.food-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   15. STAGGERED CARD ANIMATION
+   ========================================================= */
+
+.cards .card:nth-child(1),
+.food-grid > *:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.cards .card:nth-child(2),
+.food-grid > *:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.cards .card:nth-child(3),
+.food-grid > *:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.cards .card:nth-child(4),
+.food-grid > *:nth-child(4) {
+    transition-delay: 0.20s;
+}
+
+.cards .card:nth-child(5),
+.food-grid > *:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.cards .card:nth-child(6),
+.food-grid > *:nth-child(6) {
+    transition-delay: 0.30s;
+}
+
+
+/* =========================================================
+   16. LOADING SHIMMER
+   ========================================================= */
+
+.loading-shimmer {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+.loading-shimmer::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -150%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.06),
+            transparent
+        );
+
+    animation:
+        shimmer 1.5s
+        infinite;
+}
+
+@keyframes shimmer {
+
+    100% {
+        left: 150%;
+    }
+
+}
+
+
+/* =========================================================
+   17. TOAST ANIMATION
+   ========================================================= */
+
+.toast {
+    animation:
+        toastIn 0.4s
+        cubic-bezier(.22, 1, .36, 1)
+        forwards;
+}
+
+@keyframes toastIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(15px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   18. HEART / WISHLIST
+   ========================================================= */
+
+.wishlist-heart {
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.wishlist-heart:hover {
+    transform: scale(1.15);
+}
+
+.wishlist-heart:active {
+    transform: scale(0.9);
+}
+
+
+/* =========================================================
+   19. CART ICON
+   ========================================================= */
+
+.cart-icon {
+    transition:
+        transform 0.25s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.08);
+}
+
+.cart-bounce {
+    animation:
+        cartBounce 0.45s
+        ease;
+}
+
+@keyframes cartBounce {
+
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.25);
+    }
+
+    70% {
+        transform: scale(0.92);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   20. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}

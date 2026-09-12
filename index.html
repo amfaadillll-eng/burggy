@@ -1,0 +1,1588 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Burggy — Premium burgers, crispy chicken, shawarma, loaded fries and more. Freshly made, seriously delicious.">
+
+    <meta name="keywords"
+        content="Burggy, burgers, chicken, shawarma, loaded fries, food delivery, restaurant">
+
+    <meta name="author" content="Burggy">
+
+    <title>Burggy | Fresh. Crispy. Delicious.</title>
+
+
+    <!-- ==============================
+         GOOGLE FONT
+    =============================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ==============================
+         FONT AWESOME
+    =============================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+   <!-- ==============================
+     CSS
+=============================== -->
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+
+<link rel="stylesheet" href="css/animations.css">
+
+
+<!-- =====================================================
+     PREMIUM BURGGY NAVBAR
+====================================================== -->
+
+<style>
+
+    /* PREMIUM BLACK NAVBAR */
+
+    .navbar {
+        background: rgba(8, 8, 8, 0.97) !important;
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+        box-shadow:
+            0 10px 35px rgba(0, 0, 0, 0.45);
+
+        z-index: 9999;
+
+        transition: all 0.3s ease;
+    }
+
+
+    /* LOGO */
+
+    .navbar .logo img {
+        display: block;
+    }
+
+
+    /* NAV LINKS */
+
+    .navbar .nav-links a {
+        color: #eeeeee !important;
+
+        transition:
+            color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+
+    .navbar .nav-links a:hover {
+        color: #ff6b1a !important;
+
+        transform: translateY(-1px);
+    }
+
+
+    .navbar .nav-links a.active {
+        color: #ff6b1a !important;
+    }
+
+
+    /* HEART + CART */
+
+    .navbar .nav-icon {
+        color: #ffffff !important;
+
+        transition:
+            color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+
+    .navbar .nav-icon:hover {
+        color: #ff6b1a !important;
+
+        transform: translateY(-2px);
+    }
+
+
+    /* ORDER BUTTON */
+
+    .navbar .btn-small {
+        background: #ff6b1a !important;
+
+        color: #ffffff !important;
+
+        border: none !important;
+
+        box-shadow:
+            0 8px 25px rgba(255, 107, 26, 0.20);
+
+        transition:
+            background 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+
+    .navbar .btn-small:hover {
+        background: #ff7b32 !important;
+
+        color: #ffffff !important;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 12px 30px rgba(255, 107, 26, 0.30);
+    }
+
+
+    /* MOBILE NAVBAR */
+
+    @media (max-width: 768px) {
+
+        .navbar {
+            background: rgba(8, 8, 8, 0.99) !important;
+        }
+
+    }
+
+</style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="images/burggylogo.png"
+                    alt="Burggy Logo">
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-links">
+
+                <a href="index.html" class="active">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="#">
+                    Offers
+                </a>
+
+                <a href="#">
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    aria-label="Wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </a>
+
+
+                <a
+                    href="cart.html"
+                    class="nav-icon"
+                    aria-label="Shopping Cart">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                </a>
+
+
+                <a
+                    href="menu.html"
+                    class="btn btn-small">
+
+                    Order Now
+
+                </a>
+<a href="login.html" class="nav-login">
+    <i class="fa-solid fa-user"></i>
+    <span>Login</span>
+</a>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+
+        <div class="container hero-content">
+
+
+            <span class="hero-tag">
+
+                <i class="fa-solid fa-fire"></i>
+
+                Freshly Made. Seriously Delicious.
+
+            </span>
+
+
+            <h1>
+
+                BIG FLAVOUR.
+
+                <br>
+
+                <span>
+                    ZERO BORING BITES.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Premium burgers, crispy chicken, loaded fries
+                and street-style favourites made fresh for you.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <a
+                    href="menu.html"
+                    class="btn">
+
+                    Explore Menu
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                    href="menu.html"
+                    class="btn btn-outline">
+
+                    Order Now
+
+                </a>
+
+
+            </div>
+
+
+            <!-- TRUST -->
+
+            <div class="hero-trust">
+
+
+                <div class="trust-item">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <span>
+                        Premium Taste
+                    </span>
+
+                </div>
+
+
+                <div class="trust-item">
+
+                    <i class="fa-solid fa-burger"></i>
+
+                    <span>
+                        Freshly Prepared
+                    </span>
+
+                </div>
+
+
+                <div class="trust-item">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <span>
+                        Fast Delivery
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CATEGORY SECTION
+    ====================================================== -->
+
+    <section class="section categories-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+
+                <span class="section-eyebrow">
+
+                    WHAT ARE YOU CRAVING?
+
+                </span>
+
+
+                <h2>
+
+                    Pick Your
+                    <span>Favourite</span>
+
+                </h2>
+
+
+                <p>
+
+                    From juicy burgers to loaded fries,
+                    there is something for every craving.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="category-grid">
+
+
+                <!-- BURGERS -->
+
+                <a
+                    href="menu.html"
+                    class="card category-card">
+
+                    <div class="category-icon">
+
+                        <i class="fa-solid fa-burger"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Burgers
+                    </h3>
+
+
+                    <p>
+                        Juicy. Loaded. Unforgettable.
+                    </p>
+
+
+                    <span class="category-link">
+
+                        Explore
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- CHICKEN -->
+
+                <a
+                    href="menu.html"
+                    class="card category-card">
+
+                    <div class="category-icon">
+
+                        <i class="fa-solid fa-drumstick-bite"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Chicken
+                    </h3>
+
+
+                    <p>
+                        Crispy goodness in every bite.
+                    </p>
+
+
+                    <span class="category-link">
+
+                        Explore
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- SHAWARMA -->
+
+                <a
+                    href="menu.html"
+                    class="card category-card">
+
+                    <div class="category-icon">
+
+                        <i class="fa-solid fa-utensils"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Shawarma
+                    </h3>
+
+
+                    <p>
+                        Packed with bold street flavours.
+                    </p>
+
+
+                    <span class="category-link">
+
+                        Explore
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- LOADED FRIES -->
+
+                <a
+                    href="menu.html"
+                    class="card category-card">
+
+                    <div class="category-icon">
+
+                        <i class="fa-solid fa-bowl-food"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Loaded Fries
+                    </h3>
+
+
+                    <p>
+                        Crispy, cheesy and fully loaded.
+                    </p>
+
+
+                    <span class="category-link">
+
+                        Explore
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BEST SELLERS
+    ====================================================== -->
+
+    <section class="section best-sellers">
+
+        <div class="container">
+
+
+            <div class="section-heading section-heading-row">
+
+
+                <div>
+
+
+                    <span class="section-eyebrow">
+
+                        CROWD FAVOURITES
+
+                    </span>
+
+
+                    <h2>
+
+                        The
+                        <span>Burggy</span>
+                        Bestsellers
+
+                    </h2>
+
+
+                    <p>
+
+                        The dishes our customers keep coming
+                        back for.
+
+                    </p>
+
+
+                </div>
+
+
+                <a
+                    href="menu.html"
+                    class="text-link">
+
+                    View Full Menu
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DYNAMIC FOOD CONTAINER
+
+                 Food will be loaded from:
+                 http://localhost:5000/api/foods
+            ================================================== -->
+
+            <div
+                class="food-grid"
+                id="homeBestSellers">
+
+
+                <!-- LOADING -->
+
+                <div class="home-loading">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                    <span>
+                        Loading delicious food...
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROMOTIONAL BANNER
+    ====================================================== -->
+
+    <section class="section offer-section">
+
+        <div class="container">
+
+
+            <div class="offer">
+
+
+                <div class="offer-content">
+
+
+                    <span class="section-eyebrow">
+
+                        BURGGY SPECIAL
+
+                    </span>
+
+
+                    <h2>
+
+                        BUY 1.
+
+                        <br>
+
+                        GET 1
+                        <span>FREE.</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Tuesdays just got better.
+                        Grab your favourite burger and
+                        get another one on us.
+
+                    </p>
+
+
+                    <a
+                        href="menu.html"
+                        class="btn">
+
+                        Grab The Deal
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="offer-side">
+
+
+                    <div class="offer-circle">
+
+
+                        <span>
+                            EVERY
+                        </span>
+
+
+                        <strong>
+                            TUESDAY
+                        </strong>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHY BURGGY
+    ====================================================== -->
+
+    <section class="section why-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+
+                <span class="section-eyebrow">
+
+                    WHY BURGGY?
+
+                </span>
+
+
+                <h2>
+
+                    Made Different.
+
+                    <span>
+                        Made Better.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    We don't just make food.
+                    We make food worth craving.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="why-grid">
+
+
+                <!-- WHY 1 -->
+
+                <div class="why-card">
+
+
+                    <div class="why-icon">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Fresh Ingredients
+                    </h3>
+
+
+                    <p>
+
+                        Quality ingredients prepared fresh
+                        to deliver better flavour in every bite.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- WHY 2 -->
+
+                <div class="why-card">
+
+
+                    <div class="why-icon">
+
+                        <i class="fa-solid fa-fire"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Made To Order
+                    </h3>
+
+
+                    <p>
+
+                        Your food is prepared when you order,
+                        so every bite arrives hot and fresh.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- WHY 3 -->
+
+                <div class="why-card">
+
+
+                    <div class="why-icon">
+
+                        <i class="fa-solid fa-award"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Premium Quality
+                    </h3>
+
+
+                    <p>
+
+                        From ingredients to packaging,
+                        we focus on delivering a premium experience.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- WHY 4 -->
+
+                <div class="why-card">
+
+
+                    <div class="why-icon">
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Fast Delivery
+                    </h3>
+
+
+                    <p>
+
+                        Because great food shouldn't keep
+                        you waiting forever.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CUSTOMER REVIEWS
+    ====================================================== -->
+
+    <section class="section reviews-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+
+                <span class="section-eyebrow">
+
+                    CUSTOMER LOVE
+
+                </span>
+
+
+                <h2>
+
+                    Don't Take Our
+
+                    <span>
+                        Word For It.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Here's what the Burggy family has to say.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="review-grid">
+
+
+                <!-- REVIEW 1 -->
+
+                <div class="review-card">
+
+
+                    <div class="review-stars">
+
+                        ★★★★★
+
+                    </div>
+
+
+                    <p>
+
+                        "The burger was seriously amazing.
+                        Juicy patty, perfect sauce and the fries
+                        were insane."
+
+                    </p>
+
+
+                    <div class="review-user">
+
+
+                        <div class="review-avatar">
+                            A
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Arjun
+                            </strong>
+
+                            <span>
+                                Verified Customer
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- REVIEW 2 -->
+
+                <div class="review-card">
+
+
+                    <div class="review-stars">
+
+                        ★★★★★
+
+                    </div>
+
+
+                    <p>
+
+                        "Finally found a place that actually
+                        knows how to make crispy chicken.
+                        Definitely ordering again."
+
+                    </p>
+
+
+                    <div class="review-user">
+
+
+                        <div class="review-avatar">
+                            S
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Sneha
+                            </strong>
+
+                            <span>
+                                Verified Customer
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- REVIEW 3 -->
+
+                <div class="review-card">
+
+
+                    <div class="review-stars">
+
+                        ★★★★★
+
+                    </div>
+
+
+                    <p>
+
+                        "Everything arrived hot and fresh.
+                        The loaded fries are a must try."
+
+                    </p>
+
+
+                    <div class="review-user">
+
+
+                        <div class="review-avatar">
+                            R
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Rahul
+                            </strong>
+
+                            <span>
+                                Verified Customer
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOD GALLERY
+    ====================================================== -->
+
+    <section class="section gallery-section">
+
+        <div class="container">
+
+
+            <div class="section-heading section-heading-row">
+
+
+                <div>
+
+
+                    <span class="section-eyebrow">
+
+                        FROM OUR KITCHEN
+
+                    </span>
+
+
+                    <h2>
+
+                        Food That
+
+                        <span>
+                            Speaks.
+                        </span>
+
+                    </h2>
+
+
+                </div>
+
+
+                <a
+                    href="menu.html"
+                    class="text-link">
+
+                    Explore Menu
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-item gallery-large">
+
+                    <img
+                        src="images/gallery1.jpg"
+                        alt="Burggy food"
+                        onerror="this.style.display='none'">
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/gallery2.jpg"
+                        alt="Burggy burger"
+                        onerror="this.style.display='none'">
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/gallery3.jpg"
+                        alt="Burggy chicken"
+                        onerror="this.style.display='none'">
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/gallery4.jpg"
+                        alt="Burggy fries"
+                        onerror="this.style.display='none'">
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/gallery5.jpg"
+                        alt="Burggy meal"
+                        onerror="this.style.display='none'">
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BRAND STORY
+    ====================================================== -->
+
+    <section class="section story-section">
+
+        <div class="container">
+
+
+            <div class="story-grid">
+
+
+                <div class="story-image">
+
+                    <img
+                        src="images/about-burggy.jpg"
+                        alt="Burggy restaurant"
+                        onerror="this.style.display='none'">
+
+                </div>
+
+
+                <div class="story-content">
+
+
+                    <span class="section-eyebrow">
+
+                        THE BURGGY STORY
+
+                    </span>
+
+
+                    <h2>
+
+                        More Than
+
+                        <span>
+                            Just A Burger.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Burggy was created for people who believe
+                        good food should be exciting, satisfying
+                        and worth talking about.
+
+                    </p>
+
+
+                    <p>
+
+                        We bring together bold flavours,
+                        quality ingredients and a modern
+                        street-food experience to create food
+                        that keeps you coming back.
+
+                    </p>
+
+
+                    <a
+                        href="about.html"
+                        class="btn">
+
+                        Discover Burggy
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINAL CTA
+    ====================================================== -->
+
+    <section class="section cta-section">
+
+        <div class="container">
+
+
+            <div class="cta-box">
+
+
+                <span class="section-eyebrow">
+
+                    READY TO EAT?
+
+                </span>
+
+
+                <h2>
+
+                    Your Next Favourite
+
+                    <span>
+                        Meal Is Waiting.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Hungry? Let's fix that.
+
+                </p>
+
+
+                <a
+                    href="menu.html"
+                    class="btn">
+
+                    Order Your Burggy
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="container footer-grid">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+
+                <img
+                    src="images/burggylogo.png"
+                    alt="Burggy Logo">
+
+
+                <p>
+
+                    Fresh. Crispy. Delicious.
+
+                    <br>
+
+                    Made for serious cravings.
+
+                </p>
+
+
+                <div class="social-links">
+
+
+                    <a
+                        href="#"
+                        aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+
+                <h4>
+                    Explore
+                </h4>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+
+            </div>
+
+
+
+            <!-- CUSTOMER -->
+
+            <div class="footer-column">
+
+
+                <h4>
+                    Customer
+                </h4>
+
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+
+                <a href="login.html">
+                    Login
+                </a>
+
+
+                <a href="register.html">
+                    Create Account
+                </a>
+
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+
+                <h4>
+                    Get In Touch
+                </h4>
+
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Kerala, India
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 XXXXX XXXXX
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Open Daily
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+
+            <div class="container">
+
+
+                <p>
+
+                    © 2026 Burggy.
+                    All rights reserved.
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+
+    <script src="js/home.js"></script>
+
+
+</body>
+
+</html>

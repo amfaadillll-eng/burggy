@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Create your Burggy account and enjoy delicious food, fast ordering and easy checkout."
+    >
+
+    <title>Register | Burggy</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         BURGGY CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/register.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/animations.css"
+    >
+
+</head>
+
+
+<body class="register-page">
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Burggy Home"
+            >
+
+                <img
+                    src="images/burggylogo.png"
+                    alt="Burggy"
+                >
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="index.html#offers">
+                    Offers
+                </a>
+
+                <a href="index.html#gallery">
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    aria-label="Wishlist"
+                >
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+
+
+                <a
+                    href="cart.html"
+                    class="nav-icon cart-nav-icon"
+                    aria-label="Shopping cart"
+                >
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        id="cartCount"
+                        class="cart-count"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="login.html"
+                    class="btn btn-outline nav-login-btn"
+                >
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         REGISTER HERO
+    ====================================================== -->
+
+    <main>
+
+
+        <section class="register-hero">
+
+            <div class="register-hero-glow"></div>
+
+            <div class="container">
+
+                <div class="register-hero-content">
+
+                    <span class="section-eyebrow">
+                        JOIN BURGGY
+                    </span>
+
+                    <h1>
+                        Create your
+                        <span>Burggy</span>
+                        account.
+                    </h1>
+
+                    <p>
+                        Sign up once and make every future
+                        order faster, easier and better.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REGISTER SECTION
+        ================================================== -->
+
+        <section class="register-section">
+
+            <div class="container">
+
+                <div class="register-layout">
+
+
+                    <!-- =====================================
+                         LEFT SHOWCASE
+                    ====================================== -->
+
+                    <div class="register-showcase">
+
+
+                        <div class="showcase-badge">
+
+                            <span class="badge-dot"></span>
+
+                            BURGGY MEMBER
+
+                        </div>
+
+
+                        <h2>
+                            Good food.
+                            <br>
+                            <span>Better experience.</span>
+                        </h2>
+
+
+                        <p class="showcase-description">
+
+                            Create your Burggy account and
+                            keep your ordering experience
+                            simple from your first bite to
+                            your next order.
+
+                        </p>
+
+
+                        <!-- BENEFITS -->
+
+                        <div class="register-benefits">
+
+
+                            <div class="register-benefit">
+
+                                <div class="benefit-icon">
+
+                                    <i class="fa-solid fa-bolt"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Faster ordering
+                                    </h3>
+
+                                    <p>
+                                        Your details are ready
+                                        when you order.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="register-benefit">
+
+                                <div class="benefit-icon">
+
+                                    <i class="fa-solid fa-bag-shopping"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Easy checkout
+                                    </h3>
+
+                                    <p>
+                                        Add your favourites
+                                        and checkout smoothly.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="register-benefit">
+
+                                <div class="benefit-icon">
+
+                                    <i class="fa-solid fa-heart"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Save favourites
+                                    </h3>
+
+                                    <p>
+                                        Keep track of foods
+                                        you love.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- SHOWCASE FOOTER -->
+
+                        <div class="showcase-note">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Your account is protected
+                                with secure authentication.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         REGISTER CARD
+                    ====================================== -->
+
+                    <div class="register-card">
+
+
+                        <!-- CARD HEADER -->
+
+                        <div class="register-card-header">
+
+                            <span class="card-mini-label">
+                                GET STARTED
+                            </span>
+
+                            <h2>
+                                Create account
+                            </h2>
+
+                            <p>
+                                Join Burggy in just a few steps.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- FORM -->
+
+                        <form
+                            id="registerForm"
+                            class="register-form"
+                            novalidate
+                        >
+
+
+                            <!-- NAME -->
+
+                            <div class="form-group">
+
+                                <label
+                                    for="name"
+                                >
+                                    Full name
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-regular fa-user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        placeholder="Enter your full name"
+                                        autocomplete="name"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+                                <label
+                                    for="email"
+                                >
+                                    Email address
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-regular fa-envelope"></i>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="you@example.com"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PHONE -->
+
+                            <div class="form-group">
+
+                                <label
+                                    for="phone"
+                                >
+                                    Phone number
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="10-digit phone number"
+                                        inputmode="numeric"
+                                        maxlength="10"
+                                        autocomplete="tel"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PASSWORD -->
+
+                            <div class="form-group">
+
+                                <label
+                                    for="password"
+                                >
+                                    Password
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-solid fa-lock"></i>
+
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Create a password"
+                                        autocomplete="new-password"
+                                        minlength="6"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        id="toggleRegisterPassword"
+                                        aria-label="Show password"
+                                    >
+
+                                        <i class="fa-regular fa-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                                <small class="input-hint">
+                                    Use at least 6 characters.
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- CONFIRM PASSWORD -->
+
+                            <div class="form-group">
+
+                                <label
+                                    for="confirmPassword"
+                                >
+                                    Confirm password
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                    <input
+                                        type="password"
+                                        id="confirmPassword"
+                                        name="confirmPassword"
+                                        placeholder="Re-enter your password"
+                                        autocomplete="new-password"
+                                        minlength="6"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        id="toggleConfirmPassword"
+                                        aria-label="Show password"
+                                    >
+
+                                        <i class="fa-regular fa-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- MESSAGE -->
+
+                            <div
+                                id="registerMessage"
+                                class="form-message"
+                                role="alert"
+                                aria-live="polite"
+                            ></div>
+
+
+
+                            <!-- SUBMIT -->
+
+                            <button
+                                type="submit"
+                                id="registerButton"
+                                class="btn btn-primary register-submit"
+                            >
+
+                                <span>
+                                    Create Account
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+
+                        </form>
+
+
+
+                        <!-- LOGIN LINK -->
+
+                        <div class="register-login">
+
+                            <span>
+                                Already have an account?
+                            </span>
+
+                            <a href="login.html">
+                                Login here
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- SECURITY -->
+
+                        <div class="register-security">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <span>
+                                Your information is securely
+                                handled by Burggy.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOTTOM CTA
+        ================================================== -->
+
+        <section class="register-cta">
+
+            <div class="container">
+
+                <div class="register-cta-box">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            READY TO ORDER?
+                        </span>
+
+                        <h2>
+                            Your next favourite meal
+                            is waiting.
+                        </h2>
+
+                    </div>
+
+                    <a
+                        href="menu.html"
+                        class="btn btn-primary"
+                    >
+                        Explore Menu
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="footer-logo"
+                    >
+
+                        <img
+                            src="images/burggylogo.png"
+                            alt="Burggy"
+                        >
+
+                    </a>
+
+                    <p>
+                        Big flavour. Bold cravings.
+                        Made for food lovers.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="WhatsApp"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="menu.html">
+                        Menu
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+
+                <!-- CUSTOMER -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Customer
+                    </h3>
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                    <a href="register.html">
+                        Register
+                    </a>
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                    <a href="wishlist.html">
+                        Wishlist
+                    </a>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +91 XXXXX XXXXX
+                    </p>
+
+                    <p>
+                        <i class="fa-regular fa-envelope"></i>
+                        hello@burggy.com
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Kerala, India
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Burggy. All rights reserved.
+                </p>
+
+                <p>
+                    Made with
+                    <span>♥</span>
+                    for food lovers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+
+    <script src="js/register.js"></script>
+
+
+
+    <!-- =====================================================
+         PASSWORD VISIBILITY
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            () => {
+
+                function setupPasswordToggle(
+                    buttonId,
+                    inputId
+                ) {
+
+                    const button =
+                        document.getElementById(buttonId);
+
+                    const input =
+                        document.getElementById(inputId);
+
+                    if (!button || !input) return;
+
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+                            const icon =
+                                button.querySelector("i");
+
+
+                            if (
+                                input.type === "password"
+                            ) {
+
+                                input.type = "text";
+
+                                if (icon) {
+
+                                    icon.classList.remove(
+                                        "fa-eye"
+                                    );
+
+                                    icon.classList.add(
+                                        "fa-eye-slash"
+                                    );
+
+                                }
+
+                                button.setAttribute(
+                                    "aria-label",
+                                    "Hide password"
+                                );
+
+                            } else {
+
+                                input.type = "password";
+
+                                if (icon) {
+
+                                    icon.classList.remove(
+                                        "fa-eye-slash"
+                                    );
+
+                                    icon.classList.add(
+                                        "fa-eye"
+                                    );
+
+                                }
+
+                                button.setAttribute(
+                                    "aria-label",
+                                    "Show password"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+                setupPasswordToggle(
+                    "toggleRegisterPassword",
+                    "password"
+                );
+
+
+                setupPasswordToggle(
+                    "toggleConfirmPassword",
+                    "confirmPassword"
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

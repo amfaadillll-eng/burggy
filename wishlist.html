@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Your Burggy wishlist — save your favourite burgers, rolls, fries and more."
+    >
+
+    <title>Wishlist | Burggy</title>
+
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- Burggy Styles -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/wishlist.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/animations.css"
+    >
+
+</head>
+
+
+<body class="wishlist-page">
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+
+            <!-- Logo -->
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Burggy Home"
+            >
+
+                <img
+                    src="images/burggylogo.png"
+                    alt="Burggy"
+                >
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="index.html#offers">
+                    Offers
+                </a>
+
+                <a href="index.html#gallery">
+                    Gallery
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- Nav Actions -->
+
+            <div class="nav-actions">
+
+
+                <!-- Wishlist -->
+
+                <a
+                    href="wishlist.html"
+                    class="nav-icon-link active"
+                    aria-label="Wishlist"
+                    title="Wishlist"
+                >
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <span
+                        class="nav-count"
+                        id="wishlistCount"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Cart -->
+
+                <a
+                    href="cart.html"
+                    class="nav-icon-link"
+                    aria-label="Shopping cart"
+                    title="Cart"
+                >
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="nav-count"
+                        data-cart-count
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Order -->
+
+                <a
+                    href="menu.html"
+                    class="btn btn-primary nav-order-btn"
+                >
+
+                    <span>
+                        Order Now
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <!-- Mobile Menu -->
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                >
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MOBILE NAV
+    ====================================================== -->
+
+    <div
+        class="mobile-nav"
+        id="mobileNav"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="menu.html">
+            Menu
+        </a>
+
+        <a href="index.html#offers">
+            Offers
+        </a>
+
+        <a href="index.html#gallery">
+            Gallery
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="wishlist.html">
+            Wishlist
+        </a>
+
+        <a href="cart.html">
+            Cart
+        </a>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         WISHLIST HERO
+    ====================================================== -->
+
+    <section class="wishlist-hero">
+
+        <div class="wishlist-hero-overlay"></div>
+
+
+        <div class="wishlist-hero-content">
+
+            <span class="wishlist-eyebrow">
+
+                <i class="fa-solid fa-heart"></i>
+
+                Your favourites
+
+            </span>
+
+
+            <h1>
+                Wishlist
+            </h1>
+
+
+            <p>
+                The food you love,
+                saved for later.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WISHLIST SECTION
+    ====================================================== -->
+
+    <main class="wishlist-section">
+
+        <div class="wishlist-container-wrapper">
+
+
+            <!-- Section Heading -->
+
+            <div class="wishlist-section-header">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        SAVED FOR YOU
+                    </span>
+
+                    <h2>
+                        Your favourite bites
+                    </h2>
+
+                    <p>
+                        Keep the dishes you love close.
+                        Add them to your cart whenever you're ready.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="menu.html"
+                    class="wishlist-browse-btn"
+                >
+
+                    <span>
+                        Browse Menu
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LOADING
+            ================================================== -->
+
+            <div
+                class="wishlist-loading"
+                id="wishlistLoading"
+            >
+
+                <div class="wishlist-loading-spinner">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                </div>
+
+                <h3>
+                    Loading your favourites
+                </h3>
+
+                <p>
+                    Getting your saved food ready...
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 WISHLIST GRID
+            ================================================== -->
+
+            <div
+                class="wishlist-grid"
+                id="wishlistContainer"
+                style="display: none;"
+            >
+
+                <!-- Cards are loaded by wishlist.js -->
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EMPTY STATE
+            ================================================== -->
+
+            <div
+                class="wishlist-empty"
+                id="wishlistEmpty"
+                style="display: none;"
+            >
+
+                <div class="wishlist-empty-icon">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </div>
+
+
+                <span class="wishlist-empty-label">
+                    NOTHING SAVED YET
+                </span>
+
+
+                <h3>
+                    Your wishlist is waiting.
+                </h3>
+
+
+                <p>
+                    Save your favourite Burggy dishes here
+                    and come back whenever you're hungry.
+                </p>
+
+
+                <a
+                    href="menu.html"
+                    class="btn btn-primary"
+                >
+
+                    <span>
+                        Explore Menu
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ERROR STATE
+            ================================================== -->
+
+            <div
+                class="wishlist-error"
+                id="wishlistError"
+                style="display: none;"
+            >
+
+                <div class="wishlist-error-icon">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                </div>
+
+
+                <h3>
+                    We couldn't load your wishlist.
+                </h3>
+
+
+                <p>
+                    Please check your connection and try again.
+                </p>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="retryWishlist"
+                >
+
+                    <i class="fa-solid fa-rotate-right"></i>
+
+                    Try Again
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         WISHLIST CTA
+    ====================================================== -->
+
+    <section class="wishlist-cta">
+
+        <div class="wishlist-cta-inner">
+
+
+            <div class="wishlist-cta-content">
+
+                <span class="wishlist-cta-eyebrow">
+                    STILL HUNGRY?
+                </span>
+
+
+                <h2>
+                    There's always room
+                    for one more.
+                </h2>
+
+
+                <p>
+                    Discover more of Burggy's favourites
+                    and find your next obsession.
+                </p>
+
+
+                <a
+                    href="menu.html"
+                    class="btn btn-light"
+                >
+
+                    <span>
+                        Explore Menu
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="wishlist-cta-icon">
+
+                <i class="fa-solid fa-burger"></i>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-grid">
+
+
+                <!-- Brand -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="footer-logo"
+                    >
+
+                        <img
+                            src="images/burggylogo.png"
+                            alt="Burggy"
+                        >
+
+                    </a>
+
+
+                    <p>
+                        Big flavour.
+                        Fresh ingredients.
+                        Burgers made for cravings.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="WhatsApp"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Quick Links -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="menu.html">
+                        Menu
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+
+                <!-- Customer -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Customer
+                    </h4>
+
+                    <a href="wishlist.html">
+                        Wishlist
+                    </a>
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                    <a href="register.html">
+                        Create Account
+                    </a>
+
+                </div>
+
+
+
+                <!-- Contact -->
+
+                <div class="footer-column footer-contact">
+
+                    <h4>
+                        Visit Burggy
+                    </h4>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>
+                            Fresh food. Good mood.
+                        </span>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>
+                            Open daily
+                        </span>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>
+                            Contact us for orders
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Burggy.
+                    All rights reserved.
+                </p>
+
+
+                <div class="footer-bottom-links">
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+
+    <script src="js/wishlist.js"></script>
+
+
+</body>
+
+</html>

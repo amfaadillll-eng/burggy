@@ -1,0 +1,611 @@
+/* =========================================================
+   BURGGY — RESPONSIVE SYSTEM
+   Premium Black / White / Orange
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE LAPTOPS
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: min(92%, 1120px);
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    .hero-content {
+        max-width: 650px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 6vw, 5.5rem);
+    }
+
+    .category-grid,
+    .food-grid,
+    #homeBestSellers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .review-card:last-child {
+        grid-column: span 2;
+    }
+
+    .story-grid {
+        gap: 50px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: min(92%, 760px);
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 14px 4%;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: .82rem;
+    }
+
+    .navbar > .btn {
+        padding: 10px 16px;
+        font-size: .78rem;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 680px;
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 8vw, 4.8rem);
+    }
+
+    .hero-content > p {
+        max-width: 540px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+
+    /* CATEGORIES */
+
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* FOOD */
+
+    .food-grid,
+    #homeBestSellers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .food-image {
+        height: 260px;
+    }
+
+
+    /* OFFER */
+
+    .offer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 50px 40px;
+    }
+
+    .offer-side {
+        margin: 0;
+    }
+
+    .offer-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    /* STORY */
+
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-image {
+        min-height: 420px;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 220px 220px;
+    }
+
+    .gallery-large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+
+    /* REVIEWS */
+
+    .review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: 72px;
+        padding: 12px 20px;
+
+        background:
+            rgba(5, 5, 5, .98) !important;
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+    }
+
+    .logo img {
+        max-width: 115px;
+    }
+
+    /*
+       Keep the existing navigation structure intact.
+       If your current JS creates a mobile menu,
+       these rules will work with it.
+    */
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: .78rem;
+    }
+
+    .navbar > .btn {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 650px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,.70),
+                rgba(0,0,0,.94)
+            ),
+            url("../images/hero.jpg")
+            center/cover no-repeat !important;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 620px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 10vw, 4.4rem);
+        line-height: .98;
+    }
+
+    .hero-content > p {
+        font-size: .95rem;
+        line-height: 1.7;
+        margin-top: 20px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        margin-top: 28px;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons .btn-outline {
+        min-height: 50px;
+    }
+
+    .hero-trust {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* SECTION */
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(2.3rem, 8vw, 3.4rem);
+    }
+
+    .section-heading-row {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+
+    /* CATEGORY */
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .category-card {
+        min-height: 210px;
+    }
+
+
+    /* BEST SELLERS */
+
+    .food-grid,
+    #homeBestSellers {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .food-image {
+        height: 230px;
+    }
+
+    .food-content {
+        padding: 20px;
+    }
+
+    .food-top {
+        gap: 10px;
+    }
+
+    .food-top h3 {
+        font-size: 1rem;
+    }
+
+    .food-description {
+        font-size: .82rem;
+    }
+
+    .food-bottom {
+        gap: 12px;
+    }
+
+    .food-order-btn {
+        padding: 10px 13px !important;
+        font-size: .72rem !important;
+    }
+
+
+    /* WHY */
+
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+
+    /* REVIEWS */
+
+    .review-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .review-card:last-child {
+        grid-column: span 2;
+    }
+
+
+    /* STORY */
+
+    .story-image,
+    .story-image img {
+        min-height: 360px;
+    }
+
+
+    /* CTA */
+
+    .cta-box {
+        padding: 65px 35px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 30px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+    .container {
+        width: min(92%, 480px);
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 12px 16px;
+    }
+
+    .logo img {
+        max-width: 105px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: .72rem;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero h1 {
+        font-size: 2.75rem;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-tag {
+        font-size: .65rem;
+    }
+
+    .hero-content > p {
+        margin-top: 18px;
+        font-size: .9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-trust {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 2.4rem;
+    }
+
+    .section-heading-row {
+        flex-direction: column;
+    }
+
+
+    /* CATEGORY */
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .category-card {
+        min-height: 190px;
+        padding: 22px 16px;
+    }
+
+
+    /* FOOD */
+
+    .food-grid,
+    #homeBestSellers {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .food-image {
+        height: 270px;
+    }
+
+    .food-content {
+        padding: 20px;
+    }
+
+    .food-order-btn {
+        padding: 11px 15px !important;
+    }
+
+
+    /* OFFER */
+
+    .offer {
+        padding: 40px 24px;
+    }
+
+    .offer-content h2 {
+        font-size: 3rem;
+    }
+
+    .offer-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    /* WHY */
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* REVIEWS */
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card:last-child {
+        grid-column: auto;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 220px);
+    }
+
+    .gallery-large {
+        grid-column: auto;
+    }
+
+
+    /* STORY */
+
+    .story-image,
+    .story-image img {
+        min-height: 330px;
+    }
+
+
+    /* CTA */
+
+    .cta-box {
+        padding: 60px 22px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 2.35rem;
+    }
+
+    .hero-trust {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-content {
+        padding: 18px;
+    }
+
+    .food-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .food-bottom .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .offer-content h2 {
+        font-size: 2.5rem;
+    }
+}
