@@ -1192,3 +1192,40 @@ a {
     }
 
 }
+/* =========================================================
+   MOBILE HERO BACKGROUND FIX
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        position: relative !important;
+
+        background-color: #080808 !important;
+
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.90) 0%,
+                rgba(0, 0, 0, 0.68) 48%,
+                rgba(0, 0, 0, 0.38) 100%
+            ),
+            url("../images/burggy-bg.jpg") !important;
+
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: 65% center !important;
+
+        min-height: 720px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 700px !important;
+
+        background-position: 65% center !important;
+        background-size: cover !important;
+    }
+}
