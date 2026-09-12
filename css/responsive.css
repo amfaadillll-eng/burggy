@@ -1,188 +1,69 @@
 /* =========================================================
-   BURGGY — RESPONSIVE SYSTEM
+   BURGGY — RESPONSIVE DESIGN
    Premium Black / White / Orange
-   ========================================================= */
+========================================================= */
 
 
 /* =========================================================
-   LARGE LAPTOPS
+   LARGE DESKTOP
 ========================================================= */
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
 
     .container {
-        width: min(92%, 1120px);
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
     .nav-links {
-        gap: 22px;
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .nav-actions .btn {
+        padding: 11px 16px;
     }
 
     .hero-content {
         max-width: 650px;
     }
 
-    .hero h1 {
-        font-size: clamp(3.5rem, 6vw, 5.5rem);
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .category-grid,
-    .food-grid,
-    #homeBestSellers {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .why-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .review-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    .review-card:last-child {
-        grid-column: span 2;
-    }
-
-    .story-grid {
-        gap: 50px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1.4fr 1fr 1fr;
-    }
-}
-
-
-/* =========================================================
-   TABLETS
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .container {
-        width: min(92%, 760px);
-    }
-
-    /* NAVBAR */
-
-    .navbar {
-        padding: 14px 4%;
-    }
-
-    .nav-links {
-        gap: 16px;
-    }
-
-    .nav-links a {
-        font-size: .82rem;
-    }
-
-    .navbar > .btn {
-        padding: 10px 16px;
-        font-size: .78rem;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        min-height: 680px;
-    }
-
-    .hero-content {
-        max-width: 600px;
-    }
-
-    .hero h1 {
-        font-size: clamp(3rem, 8vw, 4.8rem);
-    }
-
-    .hero-content > p {
-        max-width: 540px;
-    }
-
-    .hero-buttons {
-        flex-wrap: wrap;
-    }
-
-
-    /* CATEGORIES */
-
-    .category-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-
-    /* FOOD */
-
-    .food-grid,
-    #homeBestSellers {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .food-image {
-        height: 260px;
-    }
-
-
-    /* OFFER */
-
-    .offer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 40px;
-        padding: 50px 40px;
-    }
-
-    .offer-side {
-        margin: 0;
-    }
-
-    .offer-circle {
-        width: 150px;
-        height: 150px;
-    }
-
-
-    /* STORY */
-
-    .story-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .story-image {
-        min-height: 420px;
-    }
-
-
-    /* GALLERY */
 
     .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 220px 220px 220px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .gallery-large {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-
-
-    /* REVIEWS */
-
-    .review-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-
-    /* FOOTER */
-
-    .footer-grid {
-        grid-template-columns: 1.5fr 1fr 1fr;
-        gap: 30px;
-    }
 }
 
 
@@ -190,201 +71,362 @@
    MOBILE NAVIGATION
 ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+
+    /* -----------------------------
+       DESKTOP NAV
+    ----------------------------- */
 
     .navbar {
-        min-height: 72px;
-        padding: 12px 20px;
-
-        background:
-            rgba(5, 5, 5, .98) !important;
-
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
+        height: 72px;
+        padding: 0 20px;
     }
 
-    .logo img {
-        max-width: 115px;
+    .navbar .logo {
+        position: static;
+        transform: none;
     }
 
-    /*
-       Keep the existing navigation structure intact.
-       If your current JS creates a mobile menu,
-       these rules will work with it.
-    */
-
-    .nav-links {
-        gap: 14px;
+    .navbar .logo img {
+        max-width: 125px;
+        height: auto;
     }
 
-    .nav-links a {
-        font-size: .78rem;
-    }
+    /* Hide desktop navigation */
 
-    .navbar > .btn {
+    .navbar .nav-links {
         display: none;
     }
 
+    /* Hide desktop action buttons */
 
-    /* HERO */
+    .navbar .nav-actions {
+        display: none;
+    }
+
+    /* -----------------------------
+       MOBILE MENU BUTTON
+    ----------------------------- */
+
+    .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        margin-left: auto;
+
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 10px;
+
+        background: rgba(255,255,255,0.05);
+
+        color: #ffffff;
+
+        cursor: pointer;
+        font-size: 20px;
+
+        transition: 0.3s ease;
+    }
+
+    .mobile-menu-btn:hover {
+        border-color: #f28c28;
+        color: #f28c28;
+    }
+
+
+    /* -----------------------------
+       MOBILE NAV PANEL
+    ----------------------------- */
+
+    .mobile-nav {
+        display: none;
+
+        position: fixed;
+
+        top: 72px;
+        left: 0;
+        right: 0;
+
+        z-index: 9999;
+
+        padding: 20px;
+
+        background: rgba(8, 8, 8, 0.98);
+
+        border-top: 1px solid rgba(255,255,255,0.08);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+
+        box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+    }
+
+    .mobile-nav.active {
+        display: block;
+    }
+
+
+    /* -----------------------------
+       MOBILE LINKS
+    ----------------------------- */
+
+    .mobile-nav a {
+        display: flex;
+
+        align-items: center;
+
+        width: 100%;
+
+        padding: 14px 15px;
+
+        margin-bottom: 4px;
+
+        color: #ffffff;
+
+        text-decoration: none;
+
+        font-size: 15px;
+        font-weight: 600;
+
+        border-radius: 8px;
+
+        transition: 0.25s ease;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a:active {
+        color: #f28c28;
+        background: rgba(242,140,40,0.08);
+    }
+
+
+    /* -----------------------------
+       MOBILE NAV LINKS
+    ----------------------------- */
+
+    .mobile-nav .mobile-link-home::before {
+        content: "⌂";
+        margin-right: 12px;
+    }
+
+    .mobile-nav .mobile-link-menu::before {
+        content: "☰";
+        margin-right: 12px;
+    }
+
+    .mobile-nav .mobile-link-offers::before {
+        content: "◆";
+        margin-right: 12px;
+        font-size: 10px;
+    }
+
+    .mobile-nav .mobile-link-gallery::before {
+        content: "▣";
+        margin-right: 12px;
+    }
+
+    .mobile-nav .mobile-link-about::before {
+        content: "i";
+        margin-right: 12px;
+        font-weight: 800;
+    }
+
+    .mobile-nav .mobile-link-contact::before {
+        content: "✆";
+        margin-right: 12px;
+    }
+
+
+    /* =====================================================
+       MOBILE HERO BACKGROUND
+    ===================================================== */
 
     .hero {
-        min-height: 650px;
+        position: relative;
+
+        min-height: 720px;
+
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.35),
+                rgba(0,0,0,0.65)
+            ),
+            url("../images/burggy-bg.jpg");
+
+        background-repeat: no-repeat;
+
+        background-position: center center;
+
+        background-size: cover;
+
+        background-attachment: scroll;
+
+        overflow: hidden;
+    }
+
+
+    /* Keep dark cinematic overlay */
+
+    .hero::before {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
 
         background:
             linear-gradient(
                 180deg,
-                rgba(0,0,0,.70),
-                rgba(0,0,0,.94)
-            ),
-            url("../images/hero.jpg")
-            center/cover no-repeat !important;
+                rgba(0,0,0,0.25) 0%,
+                rgba(0,0,0,0.50) 55%,
+                rgba(0,0,0,0.90) 100%
+            );
+
+        pointer-events: none;
     }
 
     .hero-content {
+        position: relative;
+        z-index: 2;
+
         width: 100%;
-        max-width: 620px;
-    }
 
-    .hero h1 {
-        font-size: clamp(3rem, 10vw, 4.4rem);
-        line-height: .98;
-    }
+        padding: 100px 22px 70px;
 
-    .hero-content > p {
-        font-size: .95rem;
-        line-height: 1.7;
-        margin-top: 20px;
-    }
-
-    .hero-buttons {
-        width: 100%;
-        margin-top: 28px;
-    }
-
-    .hero-buttons .btn,
-    .hero-buttons .btn-outline {
-        min-height: 50px;
-    }
-
-    .hero-trust {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
     }
 
 
-    /* SECTION */
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
 
     .section {
-        padding: 80px 0;
+        padding: 70px 20px;
     }
 
     .section-heading {
-        margin-bottom: 38px;
-    }
-
-    .section-heading h2 {
-        font-size: clamp(2.3rem, 8vw, 3.4rem);
-    }
-
-    .section-heading-row {
-        align-items: flex-start;
-        gap: 20px;
+        margin-bottom: 35px;
     }
 
 
-    /* CATEGORY */
+    /* =====================================================
+       CATEGORY
+    ===================================================== */
 
     .category-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
-    }
-
-    .category-card {
-        min-height: 210px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
 
-    /* BEST SELLERS */
+    /* =====================================================
+       BEST SELLERS
+    ===================================================== */
 
-    .food-grid,
-    #homeBestSellers {
-        grid-template-columns: 1fr 1fr;
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
 
-    .food-image {
-        height: 230px;
+    .food-card {
+        min-width: 0;
     }
 
-    .food-content {
-        padding: 20px;
+
+    /* =====================================================
+       OFFER
+    ===================================================== */
+
+    .offer {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
     }
 
-    .food-top {
+    .offer-content {
+        width: 100%;
+    }
+
+    .offer-side {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       WHY BURGGY
+    ===================================================== */
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+
+    /* =====================================================
+       REVIEWS
+    ===================================================== */
+
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
-    .food-top h3 {
-        font-size: 1rem;
-    }
-
-    .food-description {
-        font-size: .82rem;
-    }
-
-    .food-bottom {
-        gap: 12px;
-    }
-
-    .food-order-btn {
-        padding: 10px 13px !important;
-        font-size: .72rem !important;
+    .gallery-large {
+        grid-row: span 1;
     }
 
 
-    /* WHY */
+    /* =====================================================
+       STORY
+    ===================================================== */
 
-    .why-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .story-image {
+        order: 1;
+    }
+
+    .story-content {
+        order: 2;
     }
 
 
-    /* REVIEWS */
-
-    .review-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-    }
-
-    .review-card:last-child {
-        grid-column: span 2;
-    }
-
-
-    /* STORY */
-
-    .story-image,
-    .story-image img {
-        min-height: 360px;
-    }
-
-
-    /* CTA */
+    /* =====================================================
+       CTA
+    ===================================================== */
 
     .cta-box {
-        padding: 65px 35px;
+        padding: 45px 25px;
     }
 
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px 30px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
     }
+
 }
 
 
@@ -392,184 +434,147 @@
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
 
-    .container {
-        width: min(92%, 480px);
-    }
-
-
-    /* NAVBAR */
+    /* -----------------------------
+       NAVBAR
+    ----------------------------- */
 
     .navbar {
-        padding: 12px 16px;
+        height: 68px;
+        padding: 0 15px;
     }
 
-    .logo img {
-        max-width: 105px;
+    .navbar .logo img {
+        max-width: 110px;
     }
 
-    .nav-links {
-        gap: 10px;
+    .mobile-menu-btn {
+        width: 42px;
+        height: 42px;
     }
 
-    .nav-links a {
-        font-size: .72rem;
+    .mobile-nav {
+        top: 68px;
     }
 
 
-    /* HERO */
+    /* -----------------------------
+       HERO
+    ----------------------------- */
 
     .hero {
-        min-height: 620px;
+
+        min-height: 680px;
+
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.30),
+                rgba(0,0,0,0.75)
+            ),
+            url("../images/burggy-bg.jpg");
+
+        background-size: cover;
+
+        background-position: center center;
+
+        background-attachment: scroll;
     }
 
-    .hero h1 {
-        font-size: 2.75rem;
-        letter-spacing: -1.5px;
-    }
-
-    .hero-tag {
-        font-size: .65rem;
-    }
-
-    .hero-content > p {
-        margin-top: 18px;
-        font-size: .9rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .hero-buttons .btn,
-    .hero-buttons .btn-outline {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .hero-trust {
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
+    .hero-content {
+        padding: 90px 18px 60px;
     }
 
 
-    /* SECTIONS */
+    /* -----------------------------
+       SECTIONS
+    ----------------------------- */
 
     .section {
-        padding: 70px 0;
-    }
-
-    .section-heading h2 {
-        font-size: 2.4rem;
-    }
-
-    .section-heading-row {
-        flex-direction: column;
+        padding: 55px 16px;
     }
 
 
-    /* CATEGORY */
+    /* -----------------------------
+       CATEGORY
+    ----------------------------- */
 
     .category-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .category-card {
-        min-height: 190px;
-        padding: 22px 16px;
+        padding: 18px 12px;
     }
 
 
-    /* FOOD */
+    /* -----------------------------
+       FOOD
+    ----------------------------- */
 
-    .food-grid,
-    #homeBestSellers {
+    .food-grid {
         grid-template-columns: 1fr;
         gap: 18px;
     }
 
-    .food-image {
-        height: 270px;
-    }
-
-    .food-content {
-        padding: 20px;
-    }
-
-    .food-order-btn {
-        padding: 11px 15px !important;
+    .food-card {
+        width: 100%;
     }
 
 
-    /* OFFER */
-
-    .offer {
-        padding: 40px 24px;
-    }
-
-    .offer-content h2 {
-        font-size: 3rem;
-    }
-
-    .offer-circle {
-        width: 140px;
-        height: 140px;
-    }
-
-
-    /* WHY */
+    /* -----------------------------
+       WHY
+    ----------------------------- */
 
     .why-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* REVIEWS */
+    /* -----------------------------
+       REVIEWS
+    ----------------------------- */
 
     .review-grid {
         grid-template-columns: 1fr;
     }
 
-    .review-card:last-child {
-        grid-column: auto;
-    }
 
-
-    /* GALLERY */
+    /* -----------------------------
+       GALLERY
+    ----------------------------- */
 
     .gallery-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 220px);
-    }
-
-    .gallery-large {
-        grid-column: auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
 
-    /* STORY */
-
-    .story-image,
-    .story-image img {
-        min-height: 330px;
-    }
-
-
-    /* CTA */
-
-    .cta-box {
-        padding: 60px 22px;
-    }
-
-
-    /* FOOTER */
+    /* -----------------------------
+       FOOTER
+    ----------------------------- */
 
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 30px;
     }
+
+    .footer {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    /* -----------------------------
+       BUTTONS
+    ----------------------------- */
+
+    .btn {
+        width: auto;
+    }
+
 }
 
 
@@ -579,33 +584,26 @@
 
 @media (max-width: 380px) {
 
-    .hero h1 {
-        font-size: 2.35rem;
+    .navbar {
+        padding: 0 12px;
     }
 
-    .hero-trust {
-        grid-template-columns: 1fr;
+    .navbar .logo img {
+        max-width: 100px;
+    }
+
+    .mobile-menu-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-content {
+        padding-left: 14px;
+        padding-right: 14px;
     }
 
     .category-grid {
         grid-template-columns: 1fr;
     }
 
-    .food-content {
-        padding: 18px;
-    }
-
-    .food-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .food-bottom .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .offer-content h2 {
-        font-size: 2.5rem;
-    }
 }
